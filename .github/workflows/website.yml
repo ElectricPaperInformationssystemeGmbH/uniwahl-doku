@@ -1,0 +1,62 @@
+# Baut die Dokumentation bei jedem Pull Request und bei jedem Push auf master.
+# Nur der Push auf master veröffentlicht nach gh-pages. Die PR-Vorschauen unter
+# pr-preview/ bleiben dabei unangetastet (clean-exclude).
+name: website
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: website-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  bauen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+      - name: Abhängigkeiten
+        working-directory: website
+        run: npm ci
+      - name: Bauen
+        working-directory: website
+        run: npm run build
+      - name: Bau-Ergebnis ablegen
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        uses: actions/upload-artifact@v7
+        with:
+          name: website-build
+          path: website/build
+          include-hidden-files: true
+          retention-days: 1
+
+  veroeffentlichen:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    needs: bauen
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - name: Bau-Ergebnis holen
+        uses: actions/download-artifact@v8
+        with:
+          name: website-build
+          path: website/build
+      - name: Nach gh-pages veröffentlichen
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: website/build
+          clean-exclude: pr-preview
+          force: false
