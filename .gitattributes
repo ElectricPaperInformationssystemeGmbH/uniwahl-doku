@@ -1,0 +1,11 @@
+# Textdateien mit LF im Repo und im Arbeitsverzeichnis
+* text=auto eol=lf
+
+# Bildformate nie umwandeln
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.svg  binary
