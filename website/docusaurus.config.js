@@ -32,6 +32,11 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          // Ausdrücklich false: Ziffern vor Datei- und Ordnernamen bleiben Teil
+          // der Adresse. So folgen die Pfade 1:1 den Seiten-IDs des bisherigen
+          // Online-Handbuchs (/handbuch/4_vorbereitung/4-3_wahl_konfigurieren),
+          // und die Weiterleitungsliste bleibt einfach.
+          numberPrefixParser: false,
         },
         blog: false,
       }),
