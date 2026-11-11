@@ -1,0 +1,50 @@
+# Gerenderte Vorschau je Pull Request unter
+# https://electricpaperinformationssystemegmbh.github.io/uniwahl-doku/pr-preview/pr-<nr>/
+# Der Link steht als Kommentar im PR und lässt sich ohne GitHub-Konto öffnen.
+# Beim Schließen des PR wird die Vorschau wieder entfernt.
+name: vorschau
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, closed]
+
+permissions:
+  contents: write       # Vorschau nach gh-pages schreiben
+  pull-requests: write  # Kommentar mit dem Vorschau-Link
+  pages: read           # auf den Pages-Bau warten
+
+concurrency:
+  group: vorschau-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+
+jobs:
+  vorschau:
+    # Keine Vorschau für Pull Requests aus Forks.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        if: github.event.action != 'closed'
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+      - name: Abhängigkeiten
+        if: github.event.action != 'closed'
+        working-directory: website
+        run: npm ci
+      - name: Bauen
+        if: github.event.action != 'closed'
+        working-directory: website
+        env:
+          DOKU_BASE_URL: /uniwahl-doku/pr-preview/pr-${{ github.event.pull_request.number }}/
+        run: npm run build
+      - name: Vorschau veröffentlichen oder entfernen
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: website/build
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          qr-code: false
+          wait-for-pages-deployment: true
