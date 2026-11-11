@@ -9,6 +9,8 @@ const baseUrl = process.env.DOKU_BASE_URL || '/uniwahl-doku/';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'uniWAHL – Dokumentation',
+  // Logo und Favicon vom bisherigen Handbuch übernommen.
+  favicon: 'img/favicon.ico',
   url: 'https://electricpaperinformationssystemegmbh.github.io',
   baseUrl,
   organizationName: 'ElectricPaperInformationssystemeGmbH',
@@ -59,7 +61,8 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'uniWAHL – Dokumentation',
+        // Kein Titel neben dem Logo: das breite Logo trägt den Namen.
+        logo: {alt: 'uniWAHL', src: 'img/logo-wide.svg'},
         items: [
           {type: 'docSidebar', sidebarId: 'doku', position: 'left', label: 'Dokumentation'},
         ],
