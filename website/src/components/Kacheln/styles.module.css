@@ -1,0 +1,57 @@
+/* Raster: 2 Kacheln je Reihe auf schmalen, 4 auf mittleren, 8 auf breiten
+   Bildschirmen. */
+.kacheln > ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0 0 var(--ifm-spacing-vertical);
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 576px) {
+  .kacheln > ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .kacheln > ul {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+
+.kacheln > ul > li {
+  margin: 0;
+}
+
+/* Die ganze Kachel ist der Link: Symbol oben, Titel darunter. */
+.kacheln > ul > li > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+  padding: 0.25rem;
+  border-radius: var(--ifm-global-radius);
+  color: var(--ifm-font-color-base);
+  text-align: center;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: background-color var(--ifm-transition-fast);
+}
+
+.kacheln > ul > li > a:hover,
+.kacheln > ul > li > a:focus-visible {
+  background-color: var(--ifm-hover-overlay);
+  color: var(--ifm-link-color);
+}
+
+.kacheln > ul > li > a img {
+  display: block;
+  width: 100%;
+  max-width: 7rem;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
