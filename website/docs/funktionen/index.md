@@ -1,7 +1,9 @@
 ---
-title: Funktionen
+title: "Inhalt"
 ---
 
-# Funktionen
+import DocCardList from '@theme/DocCardList';
 
-Die Inhalte folgen mit dem Umzug aus dem bisherigen Online-Handbuch.
+Diese Übersicht bietet umfassende Informationen zu allen verfügbaren Funktionen. Sie erhalten detaillierte Einblicke in die Nutzung der einzelnen Produktkomponenten.
+
+<DocCardList />

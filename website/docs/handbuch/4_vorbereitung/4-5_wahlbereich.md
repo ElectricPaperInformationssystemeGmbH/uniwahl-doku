@@ -1,0 +1,92 @@
+---
+title: "Wahlbereich / Gruppe bearbeiten"
+---
+
+Der Wahlbereich ist die zentrale Einheit für die Bearbeitung; für sie soll ein Stimmzettel erzeugt und später Sitze zugeteilt werden.
+
+## Status der Gruppe {#status-der-gruppe}
+
+Tabelle : Statuszustände der Gruppen
+|  |  |
+|---|---|
+| 0 | Keine Wahl, es werden keine Sitze vergeben |
+| 1 | Die Anzahl der Sitze festgelegt |
+| 2 | Kandidat:innen eingeben, Wahlverfahren festlegen |
+| 3 | Alle Kandidat:innen sind eingegeben |
+| 4 | Stimmen teilweise ausgezählt |
+| 5 | Stimmen fertig ausgezählt |
+| 6 | Der Wahlbereich wurde ausgewertet |
+
+Jeder Wahlbereich wird getrennt bearbeitet und durchläuft während des Wahl­ablaufs verschiedene Stufen, die als „Status„ bezeichnet werden.
+
+## Wahlbereich bearbeiten {#wahlbereich-bearbeiten}
+
+Das Dialogfenster für den Wahlbereich enthält zwei Register:
+
+- **Wahlbereich:** Hier werden die grundlegenden Informationen über die Gruppe zusammengefasst.
+- **Zählen und Auswerten:** Hier erfolgen die Auszählung und die Auswertung der abgegebenen Stimmen.
+
+Die Register sind je nach Status des Wahlbereichs aktiviert. Zu Beginn können nur grundlegende Angaben vorgenommen werden. Nach Eingabe der Kandidat:innen sind die weiteren Register aktiviert.
+
+## Registerkarte „Wahlbereich“ {#registerkarte-wahlbereich}
+
+Hier werden die Eigenschaften des jeweiligen Wahlbereichs, insbesondere die Bezeichnungen, festgelegt. Das Aufzählungsfeld (→ [Aufzählungsfelder](./4-3_wahl_konfigurieren.md#aufzaehlungsfelder)) rechts enthält im Fall der Listenwahl die Register *Listen* für die Listenwahlvorschläge und, wenn vorgesehen, *Kandidat:innen* für die Einzelwahlvorschläge, im Fall der Mehrheitswahl nur das Register *Kandidaten*.
+
+**Name:** Die Wahlbereiche sind bei den normalen Gremien die Statusgruppen der Wahlberechtigten. Die Bezeichnungen werden mit dem Menü-Befehl *Konfiguration / Textbausteine / Allgemein*  festgelegt. Für spezielle Anwendungen wie Unterteilung in Wahlkreise, Frauenversammlung etc. (siehe auch [Weitere Gremien](./4-8_weitere_gremien.md)) können diese hier geändert werden. Falls mehrere Sprachen in der Anwendung eingestellt wurden, erscheint neben der deutschen Bezeichnung rechts die im System angegebene Sprache (siehe Abb. Sprache: Englisch).
+
+**Kürzel:** Eine Kurzbezeichnung, die zur internen Verwendung im Navigationsbereich, Export etc. genutzt wird.
+
+**Stimmzettel-Kennung:** Definition der Kennung, die rechts oben auf den Stimmzettel gedruckt werden soll. Das Eingabefeld ist nur vorhanden, wenn im Stimmzettel-Layout-Dialog die Option gewählt wurde (siehe [Layout-Optionen](../7_wahldokumente/7-4_layout.md)). Vorgabe: Gremium-Nr.-Wahlbereich-Nr.
+
+**Wähler:innengruppe:** Im Dialogfenster jedes Wahlbereichs befindet sich ein Eingabefeld „Wähler:innengruppe“, in das die für den Stimmzettel dieses Wahlbereichs zugeordneten Wähler:innengruppen-Merkmale eingetragen werden. Die Merkmale werden durch Komma getrennt (siehe [Zuordnung der Wähler:innengruppen](../10_ows/10-4_waehler_innengruppen.md)).
+
+**Wähler:innengruppe generieren:** Erzeugt automatisch die für diesen Wahlbereich benötigten Wähler:innengruppen-Merkmale auf Basis der hinterlegten Konfiguration bzw. vorhandenen Zuordnungen. Bereits eingetragene Merkmale im Feld „Wähler:innengruppe“ können dabei ergänzt oder überschrieben werden.
+
+![Abb. : Dialog-Fenster Wahlbereich bearbeiten](./img/20260309115240.png)
+
+*Abb. : Dialog-Fenster Wahlbereich bearbeiten*
+
+**Anzahl zu vergebende Sitze:** Hier wird die Anzahl der Mitglieder der einzelnen Wahlbereiche in dem Gremium eingegeben.
+
+**Wahlberechtigte:** Bei der späteren Bekanntmachung des Wahlergebnisses wird für jeden Wahlbereich jedes Gremiums die Anzahl der stimmberechtigten Mitglieder dieser Gruppe und die Wahlbeteiligung mitgeteilt.
+
+**… zählen:** Ein Assistent hilft beim Zählen der Wahlberechtigten (siehe [Wahlberechtigte zählen](../6_auszaehlung_ergebnis/6-6_wahlberechtigte_zaehlen.md)).
+
+**Stimmen pro Wähler:in:** Die Anzahl der Stimmen pro Wähler:in hängt vom Wahlverfahren (Mehrheitswahl / Verhältniswahl) ab und wird durch die Wahlordnung festgelegt. Geben Sie die Eigenschaften über das Menü: *Konfiguration / Wahlordnung* ein. Hier wird die Stimmenzahl angezeigt.
+
+**Wahlverfahren**: Geben Sie hier das Wahlverfahren für den aktuellen Wahlbereich ein:
+
+|  |  |
+|---|---|
+| Unbestimmt | Noch ist das Wahlverfahren nicht bekannt. |
+| Listenwahl | Verhältniswahl, da Listenwahlvorschläge vorliegen |
+| Mehrheitswahl | Nur Einzelkandidat:innen |
+| Ohne Wahl | Wenn z.B. die Anzahl der Bewerber nicht größer als die Anzahl zu vergebender Sitze ist, gelten die Bewerber als gewählt. Der Status wird auf 6 = „Der Wahlbereich wurde ausgewertet“ gesetzt. |
+| Keine Wahl | Es findet keine Wahl statt. |
+
+Tabelle : Übersicht der Wahlverfahren
+
+**Textverzeichnis:** Auswahl des für diesen Wahlbereich gültigen Textverzeichnisses. Damit können abweichende Bezeichnungen und Texte für Ausgaben (z. B. Stimmzettel oder Ergebnisdarstellungen) verwendet werden.
+
+**Layoutverzeichnis:** Auswahl des für diesen Wahlbereich verwendeten Layoutverzeichnisses. Hierüber lassen sich individuelle Layout-Vorlagen für Ausgaben wie Stimmzettel oder Listen festlegen.
+
+## Unteres Feld {#unteres-feld}
+
+Das untere Feld enthält einige Zahlenangaben über Wähler:innen, Stimmen und Stimmzettel, die sich aus der Kandidat:inneneingabe sowie der Auszählung ergeben.
+
+Die Registerkarte „Zählen und Auswerten“ (→ [Fenster: Zählen und Auswerten](../6_auszaehlung_ergebnis/6-2_fenster_zaehlen_auswerten.md)) werden später beschrieben.
+
+## Schaltflächen {#schaltflaechen}
+
+Die Aktionsschalttflächen am unteren linken Ende werden zum Statuswechsel genutzt: "Kandidat:inneneingabe fertig" (Wechsel von Status 2 auf 3); "Auszählung fertig" (Wechsel von Status 4 auf 5); "Auswertung" (Wechsel von Status 5 auf 6)
+
+|  |  |
+|---|---|
+| ![](./img/20260309115553.png) | Schließt die Eingabe der Kandidat:innen ab und setzt den Status des Wahlbereichs von Status 2 auf Status 3. |
+| ![](./img/20260311135410.png) | Wird verwendet, nachdem die Stimmenauszählung durchgeführt wurde und markiert diese als vollständig. Der Status wird dabei von Status 4 auf Status 5 gesetzt. |
+| ![](./img/20260311135423.png) | Sobald *Auszählung fertig* ausgewählt wurde, wird die Schaltfläche aktiviert und startet beim Anklicken die endgültige Auswertung des Wahlbereichs. Der Status wird von 5 auf Status 6 gewechselt. Nach Abschluss der Aktion stehen die Wahlergebnisse zur weiteren Verarbeitung zur Verfügung. |
+| ![](./img/20260311140152.png) | Sobald *Auswertung* ausgewählt wurde, kann die Schaltfläche Protokoll ausgeführt werden. Eine Weiterleitung öffnet eine Auswertungs- bzw. Sitzverteilungsübersicht. Dort kann die Zuweisung für das ausgewählte Gremium und die Sitzverteilung nach verschiedenen Auswertungsverfahren nachvollzogen werden. |
+| ![](./img/20260309115345.png) | Öffnet den Bereich zur Erfassung, Bearbeitung und Verwaltung der Wahlvorschläge (Listen oder Einzelkandidat:innen) für den aktuellen Wahlbereich. |
+| ![](./img/20260309115402.png) | Ruft die Einstellungen und Vorschaufunktionen für die Gestaltung und Kennzeichnung der Stimmzettel dieses Wahlbereichs auf. |
+| ![](./img/20260309115422.png) | Öffnet die Funktionen zur Konfiguration und Durchführung einer Online-Wahl für den aktuellen Wahlbereich. |
+| ![](./img/20260309115444.png) | Zeigt die ermittelten Wahlergebnisse sowie relevante Auswertungsinformationen für den Wahlbereich an. |

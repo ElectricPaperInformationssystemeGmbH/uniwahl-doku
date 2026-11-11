@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Слой_1"
+   height="1263.8851"
+   viewBox="0 0 314.8782 315.97128"
+   width="1259.5128"
+   version="1.1"
+   sodipodi:docname="paragraph.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3">
+    <rect
+       x="235.51035"
+       y="873.41583"
+       width="743.96313"
+       height="271.38278"
+       id="rect5" />
+    <rect
+       x="148.16876"
+       y="860.93848"
+       width="965.43646"
+       height="341.56799"
+       id="rect3" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.64116079"
+     inkscape:cx="682.35614"
+     inkscape:cy="755.66068"
+     inkscape:window-width="3840"
+     inkscape:window-height="2071"
+     inkscape:window-x="1911"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Слой_1" />
+  <path
+     d="m 218.44088,101.28755 a 48.46,48.46 0 0 0 -32.41,-12.589995 c -15.35,0 -27,8.21 -31,11.349995 a 48.91,48.91 0 0 0 -31,-11.349995 c -18.57,0 -31.800005,11.999995 -32.360005,12.529995 a 2,2 0 0 0 -0.64,1.47 v 84 a 2,2 0 0 0 2,2 H 217.03088 a 2,2 0 0 0 2,-2 v -84 a 2,2 0 0 0 -0.59,-1.41 z m -3.41,2.29 v 78.84 a 48.94,48.94 0 0 0 -29,-9.72 c -13.31,0 -23.88,6.17 -29,9.86 v -78.94 c 2.77,-2.29 14.21,-10.919995 29,-10.919995 a 45.54,45.54 0 0 1 29,10.879995 z m -3.75,81.12 h -50.25 c 5.15,-3.38 14.17,-8 25,-8 a 45.19,45.19 0 0 1 25.25,8 z m -87.25,-91.999995 a 45.54,45.54 0 0 1 29,10.879995 v 78.84 a 48.94,48.94 0 0 0 -29,-9.72 c -13.31,0 -23.88,6.17 -29.000005,9.86 v -78.94 c 2.77,-2.29 14.210005,-10.919995 29.000005,-10.919995 z m 25.25,91.999995 H 99.030875 c 5.150005,-3.38 14.170005,-8 25.000005,-8 a 45.19,45.19 0 0 1 25.25,8 z"
+     id="path1" />
+  <path
+     d="m 124.83088,129.24755 c 5.14,2 8.26,3.45 8.26,6.7 a 5.69,5.69 0 0 1 -1.06,3.54 2,2 0 0 0 1.55,3.21 2,2 0 0 0 1.59,-0.79 9.68,9.68 0 0 0 1.92,-6 c 0,-6.21 -5.74,-8.45 -10.81,-10.43 -5.07,-1.98 -8.06,-3.36 -8.06,-6.4 0,-4.12 3.79,-6 7.31,-6 2.6,0 7,1.18 7,5.62 a 2,2 0 0 0 4,0 c 0,-6.32 -5.53,-9.62 -11,-9.62 -5.62,0 -11.31,3.43 -11.31,10 0,6.04 5.64,8.23 10.61,10.17 z"
+     id="path2"
+     style="fill:#bf0930;fill-opacity:1" />
+  <path
+     d="m 123.74088,146.87755 c 5,1.95 8,3.36 8,6.4 0,4.12 -3.78,6 -7.3,6 -2.6,0 -7,-1.18 -7,-5.62 a 2,2 0 0 0 -4,0 8.94,8.94 0 0 0 3.6,7.31 12.35,12.35 0 0 0 7.41,2.31 c 5.62,0 11.3,-3.43 11.3,-10 0,-6 -5.63,-8.19 -10.6,-10.13 -5.14,-2 -8.26,-3.45 -8.26,-6.7 a 5.84,5.84 0 0 1 1,-3.45 2,2 0 1 0 -3.17,-2.3 9.65,9.65 0 0 0 -1.79,5.78 c 0,6.22 5.74,8.42 10.81,10.4 z"
+     id="path3"
+     style="fill:#bf0930;fill-opacity:1" />
+  <rect
+     style="fill:#000000;fill-opacity:0;stroke:#bf0930;stroke-width:2.02147;stroke-dasharray:none;stroke-opacity:1"
+     id="rect13"
+     width="312.85672"
+     height="313.9498"
+     x="1.010735"
+     y="1.010735"
+     ry="10.342369" />
+  <text
+     xml:space="preserve"
+     transform="scale(0.25)"
+     id="text3"
+     style="font-size:96px;white-space:pre;shape-inside:url(#rect3);fill:#bf0930;fill-opacity:1;stroke:#bf0930;stroke-width:8" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';fill:#bf0930;fill-opacity:1;stroke:#bf0930;stroke-width:2"
+     x="79.933151"
+     y="240.18936"
+     id="text4"><tspan
+       sodipodi:role="line"
+       id="tspan4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:2"
+       x="79.933151"
+       y="240.18936" /></text>
+</svg>

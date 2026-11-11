@@ -11,7 +11,8 @@ Die Inhalte ziehen schrittweise aus dem bisherigen Online-Handbuch hierher um.
 
 | Pfad | Inhalt |
 | --- | --- |
-| `website/docs/` | Die Seiten der Dokumentation als Markdown, je Bereich ein Ordner: `funktionen/`, `handbuch/`, `tutorium/`, `faq/`, `releases/` |
+| `website/docs/` | Die Seiten der Dokumentation als Markdown, je Bereich ein Ordner: `funktionen/`, `handbuch/`, `tutorium/`, `faq/`, `releases/`, `download/`; Bilder je Ordner unter `img/` |
+| `weiterleitungen/` | Liste der alten Adressen des bisherigen Online-Handbuchs mit ihrem neuen Ziel und ihre Prüfung (`node weiterleitungen/pruefen.mjs` nach dem Bau) |
 | `website/sidebars.js` | Reihenfolge der Seiten in der Seitenleiste |
 | `website/docusaurus.config.js` | Einstellungen der Website (Titel, Fußzeile, Suche) |
 | `website/static/` | Dateien, die unverändert ausgeliefert werden, z. B. Bilder |
