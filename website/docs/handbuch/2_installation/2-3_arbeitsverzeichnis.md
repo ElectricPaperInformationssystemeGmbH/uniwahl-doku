@@ -2,28 +2,27 @@
 title: "Arbeitsverzeichnis festlegen"
 ---
 
-Beim ersten Start wird gefragt, wo das **Arbeitsverzeichnis** liegen soll. Wählen Sie z.B.:
-„C:\Benutzer\&lt;Nutzername&gt;\uniwahl“. Dort werden dann u.a. folgende Verzeichnisse angelegt:
+Beim ersten Start legt uniWAHL ohne Rückfrage das Demo-Arbeitsverzeichnis `…\uniwahl\DemoWahl\` an und öffnet die Wahl `DemoWahl.whl`.
+
+Ein eigenes **Arbeitsverzeichnis** wählen Sie über `Konfiguration / Arbeitsverzeichnis / Öffnen andere ...` im Dialog „Arbeitsverzeichnis einstellen“. Verwenden Sie dafür nicht das Programmverzeichnis `…\uniwahl`, in dem sich `uniwahl-config.ini` und die Lizenzdatei `license.lic` befinden, sondern ein eigenes Verzeichnis, z. B. `…\uniWAHLDaten`. Dort werden dann u. a. folgende Verzeichnisse angelegt:
 
 ![](./img/image7.png)
 
-**.\ausgabe** für die Ausgaben des Programms (→ [Wahldokumente, Auswertungen](../7_wahldokumente/index.md))
-
-**.\doc** und **.\whl\beispiele** für die Demo-Daten, Handbücher und Anleitungen (→ [Tutorium](../../tutorium/index.md))
-
-**.\logbuch** für die Wahlprotokolle (→ [Logbuch](../8_funktionen/8-11_logbuch.md))
+**.\ausgabe** (mit Unterordner **xml**) für die Ausgaben des Programms (→ [Wahldokumente, Auswertungen](../7_wahldokumente/index.md))
 
 **.\waehler** für die Wahlverzeichnisse (.xlsx und .wvz-Dateien, Briefwahlunterlagen) (→ [Wahlverzeichnis](../4_vorbereitung/4-9_wahlverzeichnis.md))
 
-und **.\whl** für die Wahlvorgangs- sowie **.\stimmen** für die Abstimmungsdaten.
+**.\whl** für die Wahlvorgangs-, **.\stimmen** für die Abstimmungsdaten, außerdem **.\termine** und **.\uniscan\…**.
 
-Das Arbeitsverzeichnis sollte sich unterscheiden von dem Verzeichnis „uniWAHL“, in dem sich die ini-Datei und die Lizenz befinden.
+Nur im Demo-Arbeitsverzeichnis gibt es zusätzlich **.\doc** mit Handbüchern und Anleitungen; die Beispiel-Wahlen (`.whl`) liegen dort direkt in `DemoWahl\whl` (→ [Tutorium](../../tutorium/index.md)).
+
+Das **Logbuch** liegt nicht im Arbeitsverzeichnis, sondern immer im Programmverzeichnis unter `…\uniwahl\logbuch` (→ [Logbuch](../8_funktionen/8-11_logbuch.md)).
 
 ![](./img/image6.png)
 
 Abb.: Arbeitsverzeichnis einstellen
 
-Außerdem wird die **Lizenzdatei** installiert. Dazu öffnet sich ein Dialog, in dem Sie den Pfadnamen der Lizenzdatei eingeben bzw. suchen können.
+Ohne **Lizenzdatei** läuft uniWAHL im Demo-Modus und zeigt beim Start einen Demo-Hinweis mit einem Feld, in dem Sie die Lizenzdatei angeben können. Alternativ installieren Sie die Lizenz über `Hilfe / Lizenz`.
 
 :::tip
 
