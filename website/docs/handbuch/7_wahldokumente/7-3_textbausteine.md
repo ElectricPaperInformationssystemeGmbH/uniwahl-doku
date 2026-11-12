@@ -15,6 +15,8 @@ Die Länge der Texte ist grundsätzlich nicht auf die Länge des Eingabe­feldes
 
 Mit diesen Schaltflächen lassen sich komplette Sätze von Textbausteinen laden und speichern. So kann man bei unterschiedlichen Anforderungen leicht umschalten oder Texte von einem Wahlprojekt in ein anderes übertragen. Auch lassen sich z.B. englischsprachige Formulierungen speichern. Ist die Mehrsprachigkeit aktiviert  wird für jede Sprache ein eigene Sprachdatei (.tv) gespeichert, die getrennt weitergegeben und geladen werden kann.
 
+**Standard:** Mit der Schaltfläche „Standard“ werden nach einer Rückfrage alle Texte des gewählten Textverzeichnisses auf die Vorgaben von uniWAHL zurückgesetzt. Speichern Sie vorher die aktuellen Texte, wenn Sie diese noch benötigen.
+
 ## Textverzeichnisse {#textverzeichnisse}
 
 Mit Hilfe von Textverzeichnissen ist es möglich, einen vordefinierten Satz von Textbausteinen direkt in uniWAHL zu speichern und diesen dann in unterschiedlichen Wahlbereichen einzusetzen. So können verschiedene Wahlprojekte noch einfacher in einer Wahlprojekt-Datei (WHL) kombiniert werden (z.B. Sprachanforderungen unterschiedlicher Gremien, Texte für "Nominierung" oder "Einfache Sprache" in bestimmten Wahlbereichen).
@@ -63,11 +65,11 @@ In diesem Register sind einige allgemeine Texte und Bezeichnungen der Gruppen so
 
 **Regeln für ‚Kandidat:innen nominieren’**: Dieser Text wird in den Hinweisen für die Stimmabgabe ausgegeben, wenn bei der Stimmabgabe Kandidat:innen nominiert werden können.
 
-**Hinweise für das Ankreuzen der Scanner-Stimmzettel:** Was muss die wählende Person beim Ankreuzen beachten?
+**Hinweise für das Ankreuzen der uniSCAN-Stimmzettel:** Was muss die wählende Person beim Ankreuzen beachten?
 
 **Listen abkürzen Zusatz:** Bei gebundenen Listen ist es möglich, die Anzahl der auf dem Stimmzettel aufgeführten Kandidat:innen zu beschränken. In dem in der Abbildung gezeigten Fall, erscheint der Text: *„sowie xx weitere (insgesamt yy) Kandidierende“.* Bleibt das 3. Feld leer und im 2. steht: „weitere Kandidat:innen“, ist der Ausgabetext: „sowie xx weitere Kandidierende“. Bleibt das 2. Feld leer, wird nur die Gesamtzahl genannt.
 
-**Mehrsprachigkeit:** Ist diese Funktion aktiv, werden mehrere Sprachen nebeneinander dargestellt, damit diese schneller übersetzt werden können.
+**Mehrsprachigkeit:** Die Sprachen werden in der Wahlordnung (`Konfiguration / Wahlordnung`, Register „Allgemein“, Liste „Mehrsprachigkeit“) ausgewählt. Sind mehrere Sprachen gewählt, zeigen die Textbausteine je Sprache eine eigene Spalte, damit die Texte nebeneinander übersetzt werden können.
 
 ## Texte zur Online-Wahl {#texte-zur-online-wahl}
 
@@ -79,13 +81,13 @@ Hier können alle Texte des **Online-Wahlsystems** geändert werden. Diese Texte
 
 :::info
 
-**Hinweis:** Die technischen Bezeichner zeigen an, unter welcher Komponente der Text im uniWAHL Online-Wahlsystem geführt wird (z.B. **avBooth** = Wahlkabine, **avAdmin** = Administrationsoberfläche) und dienen rein der Übergabe der Texte an die Parameter per JSON-Datei. Treten Texte mehrfach auf, lässt sich anhand der Bezeichner erahnen, in welchem Kontext der Text verwendet wird.
+**Hinweis:** Die technischen Bezeichner zeigen an, unter welcher Komponente der Text im uniWAHL Online-Wahlsystem geführt wird, und dienen rein der Übergabe der Texte an die Parameter per JSON-Datei. Welche Bezeichner erscheinen, hängt von der Generation des Online-Wahlsystems ab: bei der 1. Generation z. B. `avBooth…` (Wahlkabine), bei der 2. Generation z. B. `common.goBack`. Treten Texte mehrfach auf, lässt sich anhand der Bezeichner erahnen, in welchem Kontext der Text verwendet wird.
 
 :::
 
-**Geänderte Texte anzeigen**: Hierdurch wird ein Filter gesetzt, der nur die Textbausteine anzeigt, die vom uniWAHL Standard abweichend sind, d.h. die zuletzt vom Benutzer geändert wurde. Diese Funktion wurde mit Version 6.5 von uniWAHL eingeführt. Mit einer älteren Version geänderte Textbausteine werden nicht angezeigt.
+**Geänderte Texte anzeigen**: Hierdurch wird ein Filter gesetzt, der jeden Textbaustein ausblendet, dessen Text dem uniWAHL-Standardtext der jeweiligen Sprache gleicht. Angezeigt werden also nur die geänderten Texte.
 
-**Mehrsprachigkeit**: Ist diese Funktion aktiv , werden mehrere Sprachen nebeneinander dargestellt, damit diese schneller übersetzt werden können.
+**Mehrsprachigkeit**: Sind in der Wahlordnung mehrere Sprachen gewählt (siehe oben unter [Texte der Stimmzettel](#texte-der-stimmzettel)), wird für jede Sprache eine eigene Spalte angezeigt.
 
 ![Abb. : Textbausteine und Vorschau des Online-Wahlsystems](./img/20250708212855.png)
 
@@ -111,8 +113,8 @@ Hier können alle Texte des **Online-Wahlsystems** geändert werden. Diese Texte
 
 ## Texte Terminplan {#texte-terminplan}
 
-![Abb. : Textbausteine Wahlergebnisse](./img/20260325105225.png)
+![Abb. : Textbausteine Terminplan](./img/20260325105225.png)
 
-*Abb. : Textbausteine Wahlergebnisse*
+*Abb. : Textbausteine Terminplan*
 
 Die hier gewählten Texte werden benutzt: im Register `Wahlordnung / Terminplan`  und in der `Kurzform des Terminplans` .
