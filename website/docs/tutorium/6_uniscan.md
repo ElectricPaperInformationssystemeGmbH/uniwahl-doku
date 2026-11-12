@@ -190,7 +190,7 @@ Die unklaren Stimmzettel werden durch den Wahlvorstand weiter klassifiziert. I.d
 
 :::
 
-![{{:tutorium:6_uniscan:image7.jpg?nolink |](./img/image9.jpg)
+![](./img/image9.jpg)
 **Ungültig**: Die ungültigen Stimmzettel werden ebenfalls gescannt, es wird aber lediglich im Scanverfahren die Anzahl ermittelt
 
 ## Offensichtlich gültige Stimmzettel {#offensichtlich-gueltige-stimmzettel}
