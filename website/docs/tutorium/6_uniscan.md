@@ -36,13 +36,13 @@ uniSCAN wird direkt in uniWAHL ausgeführt. Es ist wichtig, dass beim Einlesen d
 
 ## Erster Test - Ausprobieren mit Beispieldateien {#erster-test-ausprobieren-mit-beispieldateien}
 
-- Starten Sie uniWAHL. Öffnen Sie die **DemoWahl.whl** (...\whl\beispiele).
-- Öffnen Sie das Menü [**uniSCAN / Einstellungen**].
+- Starten Sie uniWAHL. Öffnen Sie die **DemoWahl.whl** (...\whl).
+- Öffnen Sie das Menü [**uniSCAN / Einstellungen**] (Dialog „uniSCAN Einstellungen“).
 - Testen Sie zuerst *ohne* die Häkchen bei [**Unerlaubte Zusätze suchen**] und [**Markierung durch Schwärzung löschen**].
-- Klicken Sie auf [**uniSCAN / Analysiere vorhandene Tiff-Datei**].
+- Klicken Sie auf [**uniSCAN / Analysiere vorhandene Tiff-Datei**]. Dieser Menüpunkt ist gesperrt, solange der Tiff-Ordner beobachtet wird; beenden Sie die Beobachtung dann zuerst mit [**uniSCAN / \* Beobachtung Tiffordner stoppen**].
 - Wählen Sie den Stapel: ..\uniscan\archive\9000-DemoWahl-Senat-Prof-Teststapel.tif
 - Warten Sie bis das Auspacken und die Analyse fertig sind: Der Fortschrittsbalken wird grün.
-- Klick auf [**Analyse / Testen**]: Kontrollieren Sie das Import-Protokoll (Auszählungsprotokoll).
+- Klicken Sie im Analysefenster auf [**Testen**]: Kontrollieren Sie das Import-Protokoll (Auszählungsprotokoll).
 - Wiederholen Sie die Analyse mit Häkchen bei [Unerlaubte Zusätze suchen] und [Markierung durch Schwärzung löschen].
 Sie werden feststellen, dass je nach Einstellung geänderte Ergebnisse vorliegen können.
 
@@ -73,7 +73,8 @@ Abb.: uniSCAN Arbeitsverzeichnis
 - uniSCAN legt Dokumente (Scan-Dateien, Protokolle, XML-Erkennungssets, Debug-Stimmzettel) im Arbeitsverzeichnis von uniWAHL im Ordner [uniscan] ab.
 - Starten Sie uniWAHL.
 - Öffnen Sie eine bestehende whl-Datei bzw. nutzen Sie eine Kopie zum Testen.
-- Über den Menübefehl [**Konfiguration / Arbeitsverzeichnis**] stellen Sie das Arbeitsverzeichnis ein. Dabei werden die benötigten Unterverzeichnisse automatisch eingerichtet und die Testdateien dort hinterlegt.
+- Über den Menübefehl [**Konfiguration / Arbeitsverzeichnis / Öffnen andere ...**] stellen Sie das Arbeitsverzeichnis ein. Dabei werden die benötigten Unterverzeichnisse automatisch eingerichtet und die Testdateien dort hinterlegt.
+- Der Pfad des Arbeitsverzeichnisses darf keine Umlaute enthalten; uniSCAN lehnt solche Pfade ab.
 - Prüfen Sie die oben beschriebene Ordner-Struktur von uniSCAN.
 
 Legen Sie vor einem neuen Wahlvorgang ein neues Verzeichnis an. Ändern Sie während der Bearbeitung des Wahlvorgangs das Arbeitsverzeichnis möglichst nicht mehr.
@@ -114,20 +115,20 @@ Geben Sie nur Stimmzettel an Wählende aus, deren Formular-ID Sie vorher geprüf
 ## Test: Leere Stimmzettel {#test-leere-stimmzettel}
 
 - Erstellen Sie einen Stapel mit je einem leeren Stimmzettel her und nennen ihn z.B. „Leer“ oder „Referenzstimmzettel“. Scannen Sie ihn in den [**uniscan/tiff**]-Ordner.
-- Entfernen Sie vorher in uniWAHL unter [**uniSCAN / Eigenschaften**] das Häkchen bei [**Unerlaubte Zusätze suchen**].
+- Entfernen Sie vorher in uniWAHL unter [**uniSCAN / Einstellungen**] das Häkchen bei [**Unerlaubte Zusätze suchen**].
 - Analysieren und testen (***nicht*** importieren) der TIF-Dateien. Alle Stimmzettel müssen ungültig sein.
 
 ## Referenz-Stimmzettel vorbereiten (optional) {#referenz-stimmzettel-vorbereiten-optional}
 
 Referenz-Stimmzettel (Leere Exemplare im Original-Scan) werden benötigt, wenn man unerlaubte Zusätze suchen will: Zusätzlich werden auch andere Parameter der Stimmzettel wie die Größe der Analysebereiche hierüber bestimmt.
-- Menü [**uniSCAN / Referenzstimmzettel vorbereiten**]: Geben Sie den vorher eingescannten Stapel leerer Stimmzettel an, er wurde nach der Analyse in den [**uniscan/archive**]-Ordner kopiert.
+- Menü [**uniSCAN / Referenz-Stimmzettel vorbereiten**]: Geben Sie den vorher eingescannten Stapel leerer Stimmzettel an, er wurde nach der Analyse in den [**uniscan/archive**]-Ordner kopiert.
 - Setzen Sie nun ggf. das Häkchen bei [**Unerlaubte Zusätze suchen**], wenn Sie diese Option nutzen wollen.
 
 ## Test: Ausgefüllte Stimmzettel {#test-ausgefuellte-stimmzettel}
 
 - Stellen Sie einen Stapel mit mehreren Stimmzetteln von allen Typen her und füllen Sie diese aus. Probieren Sie typische Markierungen am Stimmzettel aus.
 - Scannen Sie die Stimmzettel mit einem Scanprogramm (siehe oben) ein.
-- Menü [**uniSCAN / Analysiere vorhandene Tiff-Datei**]: Bitte ***nur*** auf [**Teste Stimmen**] klicken, damit keine Stimmen etc. übernommen werden.
+- Menü [**uniSCAN / Analysiere vorhandene Tiff-Datei**]: Bitte im Analysefenster ***nur*** auf [**Testen**] klicken (nicht auf [**Importiere die Stimmen**]), damit keine Stimmen etc. übernommen werden. Später können Sie den Test auch über das Menü [**uniSCAN / Teste Stimmen**] wiederholen.
 - Kontrollieren Sie im Auszählungsprotokoll die analysierten Stimmen und die ungültigen Stimmzettel.
 Passen Sie die Einstellungen in uniWAHL in [**uniSCAN / Einstellungen**] so an, dass die Ergebnisse im Auszählungsprotokoll den gescannten Bilddateien entsprechen (z.B. Schwärzungsgrad, Korrekturen vorhanden, Bildrauschen vorhanden). ***Erst dann*** importieren Sie die Stapel!
 
@@ -142,7 +143,7 @@ Passen Sie die Einstellungen in uniWAHL in [**uniSCAN / Einstellungen**] so an, 
 
 1. **Debug Modus einschalten**
    1. Unter dem Menü [**uniSCAN / Einstellungen**] aktivieren Sie [**Debug-Modus**] in den erweiterten Einstellungen.
-   1. Im Ordner […/**uniSCAN/debug**] werden anschließend für jeden Stimmzettel Bilder mit dem Analyseergebnis abgelegt. Prüfen Sie diese Bilder, um etwaige Scanprobleme zu erkennen.&lt;/ol&gt;
+   1. Im Ordner […/**uniSCAN/debug**] werden anschließend für jeden Stimmzettel Bilder mit dem Analyseergebnis abgelegt. Prüfen Sie diese Bilder, um etwaige Scanprobleme zu erkennen.
 
 ## Hinweise zur Verarbeitung der Stimmzettel {#hinweise-zur-verarbeitung-der-stimmzettel}
 
