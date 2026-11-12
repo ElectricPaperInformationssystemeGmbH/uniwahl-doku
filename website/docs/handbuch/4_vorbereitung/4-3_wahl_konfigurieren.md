@@ -18,9 +18,13 @@ title: "Wahl konfigurieren"
 
 **Wahlbezeichnung**: Diese Bezeichnung wird einheitlich in den Wahldokumenten verwendet.
 
+**Wahlkennung:** Zeigt die Kennung des Wahlvorgangs an (nicht bearbeitbar). Das Feld ist nur mit einer eWAHL- oder uniSCAN-Lizenz sichtbar.
+
 **Standard-Anzahl der Gruppen/Wahlkreise pro Gremium**: Die Standardzahl von Wahlbereichen innerhalb der Gremien, die bei einem neuen Gremium automatisch angelegt werden. Die Bezeichnungen werden als Textbausteine festgelegt
 
 **1. Wahltag**: Datum des ersten Wahltages. Dieses Datum wird für die Erstellung des Terminplans der Wahl verwendet.
+
+**Alle Kandidat:innen löschen**: Entfernt alle Kandidat:innen, die übrigen Einstellungen bleiben erhalten (→ [Bestehender Wahlvorgang](./4-1_wahlvorgang_anlegen.md#oder-bestehender-wahlvorgang)).
 
 ## Aufzählungsfelder {#aufzaehlungsfelder}
 
@@ -28,9 +32,9 @@ Auf der rechten Seite befindet sich ein Aufzählungsfeld, in dem die Gremien die
 
 |  |  |
 |---|---|
-| ![](./img/20260309103256.png) | Ein neues Element wird hinzugefügt. Dazu öffnet sich das entsprechende Fenster; nach dessen Schließen wird das neue Element eingefügt. |
-| ![](./img/20260309103324.png) | Das ausgewählte Element wird bearbeitet; das entsprechende Fenster öffnet sich (auch durch Doppelklick auf das Element). |
-| ![](./img/20260309103349.png) | Das ausgewählte Element wird aus der Liste entfernt. |
+| ![](./img/20260309103256.png) | „Hinzufügen F2“: Ein neues Element wird hinzugefügt. Dazu öffnet sich das entsprechende Fenster; nach dessen Schließen wird das neue Element eingefügt. |
+| ![](./img/20260309103324.png) | „Bearbeiten F3“: Das ausgewählte Element wird bearbeitet; das entsprechende Fenster öffnet sich (auch durch Doppelklick auf das Element). |
+| ![](./img/20260309103349.png) | „Entfernen F4“: Das ausgewählte Element wird nach einer Rückfrage aus der Liste entfernt. |
 | ![](./img/20260309103405.png) | Das ausgewählte Element wird in der Liste nach **unten** verschoben. |
 | ![](./img/20260309103422.png) | Das ausgewählte Element wird in der Liste nach **oben** verschoben. |
 | ![](./img/20260309103731.png) | Rechts unten werden die Anzahl und die Art der Elemente angezeigt |
@@ -39,7 +43,7 @@ Auch die folgenden Funktionen sind immer identisch:
 
 ## Beenden {#beenden}
 
-**OK**: Die aktuellen Einstellungen von Texten und Parametern werden übernommen.
+**OK** / **Speichern**: Die aktuellen Einstellungen von Texten und Parametern werden übernommen und das Fenster geschlossen. Sobald Sie etwas geändert haben, heißt die Schaltfläche „Speichern“ und der Fenstertitel trägt den Zusatz „(geändert)“.
 
 **Abbrechen**: Das Fenster wird geschlossen ohne Übernahme der Änderungen.
 
