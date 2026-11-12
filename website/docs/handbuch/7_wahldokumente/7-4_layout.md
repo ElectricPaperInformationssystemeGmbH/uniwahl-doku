@@ -1,5 +1,5 @@
 ---
-title: "Layout- Stimmzettel und Formate"
+title: "Layout – Stimmzettel"
 ---
 
 Sie können das Layout der Bekanntmachungen und der Stimmzettel beeinflussen.
@@ -32,25 +32,25 @@ In diesem Fenster werden die Parameter für die Gestaltung der Stimmzettel einge
 
 **Stimmzettel zum Einscannen:** Diese Option wird ausgewählt, wenn Stimmzettel für das automatische Auszählen erstellt werden sollen. Das Aussehen des Dialogfensters ändert sich und weitere Optionen ( → [uniSCAN Stimmzettel](../9_uniscan/9-4_stimmzettel.md) ) können gewählt werden.
 
-## Allgemein {#allgemein}
+### Allgemein {#allgemein}
 
 **Blöcke durch Linien trennen:** Waagerechte Linien trennen die Bereiche.
 
 **Linien fett:** Die Linien können fett gezeichnet werden.
 
-## Logo-Grafik {#logo-grafik}
+### Logo-Grafik {#logo-grafik}
 
 **Grafik einbinden:** Man kann eine Grafik (Dienstsiegel, Briefkopf etc.) im Stimmzettel anzeigen.
 
 **als Wasserzeichen:** Die Grafik wird in der Papierform in geringerer Schwärzung gezeichnet.
 
-**Datei:** Wählen Sie den Dateinamen der gewünschten Grafik. Es werden hier auch URL zu Bilddateien (aber keine SVG) unterstützt. Bei Verwendung von Logos zur Onlinewahl wird eine URL empfohlen.
+Im Textfeld mit dem Ordner-Symbol (ohne Beschriftung) tragen Sie den Dateinamen der gewünschten Grafik ein oder wählen die Datei über das Ordner-Symbol aus. Es werden hier auch URL zu Bilddateien (aber keine SVG) unterstützt. Bei Verwendung von Logos zur Onlinewahl wird eine URL empfohlen.
 
 **Position etc.:** Koordinaten der Position der Grafik (bezogen auf die linke obere Ecke des Papiers) und deren Größe angeben (siehe Hinweis am Ende dieses Kapitels).
 
-## Kopf {#kopf}
+### Kopf {#kopf}
 
-**zentriert:** Die Zeilen des Kopf-Bereichs werden zentriert.
+**Kopf zentriert:** Die Zeilen des Kopf-Bereichs werden zentriert.
 
 **kompakt**: Die Zeilen „Stimmzettel“ und „für die Wahl...“ werden zusammengefasst, die Regeln werden linksbündig und ohne Zwischenraum aufgeführt.
 
@@ -60,11 +60,11 @@ In diesem Fenster werden die Parameter für die Gestaltung der Stimmzettel einge
 
 **Stimmzettel-Ken****nung:** Die Stimmzettel werden rechts oben mit einer Kennung versehen (zum einfacheren Sortieren). Die Kennung wird im Wahlbereich-Dialog definiert .
 
-## Stimmzettel-Farbe {#stimmzettel-farbe}
+### Stimmzettelfarbe {#stimmzettel-farbe}
 
 In diesem Bereich kann entschieden werden, ob der Stimmzettel eine farbliche Markierung zur besseren optischer Abgrenzung erhalten soll. Es kann aus vordefinierten Farben gewählt werden. Ist eine Stimmzettelfarbe ausgewählt, wird auch der Kopfbereich (Überschrift) des Wahlbereichs / der Statusgruppe farblich gekennzeichnet.
 
-## Bestimmungen {#bestimmungen}
+### Bestimmungen {#bestimmungen}
 
 **Vor Listen:** Der Block mit den Bestimmungen zur Stimmabgabe erscheint, wie in dem ersten Beispiel  vor den Kandidat:innen-Listen, anderenfalls unten auf dem Stimmzettel.
 
@@ -72,7 +72,11 @@ In diesem Bereich kann entschieden werden, ob der Stimmzettel eine farbliche Mar
 
 **Zwischenraum (pt):** Vertikaler Zwischenraum zwischen den verschiedenen Bestimmungen.
 
-## Listen {#listen}
+**Mit Rahmen:** Die Bestimmungen werden mit einem Rahmen dargestellt.
+
+**Markierungshinweis darstellen:** *[*Nur* bei Stimmzettel zum Einscannen]* Auf dem Stimmzettel wird der Markierungshinweis für uniSCAN dargestellt.
+
+### Listen {#listen}
 
 **Formatvorlage**: Für den Listennamen
 
@@ -94,13 +98,13 @@ In diesem Bereich kann entschieden werden, ob der Stimmzettel eine farbliche Mar
 
 **Gebundene Listen kompakt** *[*Nur* bei gebundenen Listen]*: Bei gebundenen Listen können die Kandidat:innen kompakt in einem Block aufgeführt werden. Bei großer Kandidat:innenzahl sinnvoll.
 
-## Listenverbindungen {#listenverbindungen}
+### Listenverbindungen {#listenverbindungen}
 
 **Formatvorlage:** Darstellung der Listenverbindung
 
 **Listenverb. neue Zeile:** Die Listenverbindungen werden unter dem Kennwort der Liste aufgeführt, nicht in derselben Zeile.
 
-## Kandidaten {#kandidaten}
+### Kandidaten {#kandidaten}
 
 **Kreis statt Kästchen**: *[Nicht bei Stimmzettel zum Einscannen]* Kreuz im Kreis statt im Kästchen.
 
@@ -110,9 +114,9 @@ In diesem Bereich kann entschieden werden, ob der Stimmzettel eine farbliche Mar
 
 **Größe**: Durchmesser bzw. Seitenlänge der Ankreuzfelder in mm.
 
-**Kandidaten nummerieren:** Die Kandidat:innen werden nummeriert, wenn für das jeweilige Wahlverfahren (Mehrheitswahl / Listenwahl) dieses vorgesehen wurde (Menü: *Konfiguration / Wahlordnung*). Wird diese Option gewählt, werden die Kandidat:innen auch auf dem Auszählungsprotokoll nummeriert.
+**Kandidaten nummerieren:** Die Kandidat:innen werden nummeriert, wenn für das jeweilige Wahlverfahren (Mehrheitswahl / Listenwahl) dieses vorgesehen wurde (Menü: *Konfiguration / Wahlordnung*). Wird diese Option gewählt, werden die Kandidat:innen auch auf dem Auszählungsprotokoll nummeriert. Ist bei den Kandidaten-Feldern „als Tabelle“ gewählt, wird „Kandidaten nummerieren“ abgewählt und gesperrt.
 
-## Kandidaten-Felder {#kandidaten-felder}
+### Kandidaten-Felder {#kandidaten-felder}
 
 **als Tabelle:** Werden bei den Kandidat:innen neben den Namen noch weitere Angaben gemacht (Tätigkeitsbereich, Vertretung), kann eine tabellarische Darstellung sinnvoll sein; anderenfalls werden sie zusammengeschoben. In der Online-Wahl werden Kandidierende 2-zeilig mit Unterschrift angezeigt, wenn diese Funktion aktiviert ist.
 
@@ -128,13 +132,11 @@ In diesem Bereich kann entschieden werden, ob der Stimmzettel eine farbliche Mar
 
 **Feldbezeichner:** Aus den Aufklappboxen werden die entsprechenden Feldbezeichner ausgewählt. Diese wurden beim Konfigurieren der Perso­nen­angaben bereitgestellt . Die ersten Felder sollten den Namen enthalten. Es können nur so viele Bezeichner gesetzt werden, wie in „Anzahl Felder“ festgelegt wurde.
 
-**Feldbreiten:** Die Spaltenbreiten werden in mm angegeben. Die noch verfügbare Restbreite wird der letzten Spalte zugewiesen. Diese ist deshalb nicht direkt veränderbar.
+**Breite (mm):** Die Spaltenbreiten werden in mm angegeben. Die noch verfügbare Restbreite wird der letzten Spalte zugewiesen. Diese ist deshalb nicht direkt veränderbar.
 
 ![](./img/20260325112826.png) : Öffnet eine Vorschau des Papier-Stimmzettels im jeweiligen Office-Format (LibreOffice, Microsoft Word).
 
-:::tip
-
-## Tipps {#tipps}
+:::tip Tipps
 
 ***1. Viele Kandidat:innen auf einer Seite***
 
@@ -142,7 +144,7 @@ In diesem Bereich kann entschieden werden, ob der Stimmzettel eine farbliche Mar
 
 Ist die Anzahl der Kandidat:innen groß, sollten Sie folgendermaßen vorgehen:
 
--&gt; Seitenränder schmaler (Konfiguration / Seite einrichten)
+-&gt; Seitenränder schmaler (im Layout, Register „Formate“, Bereich „Seite“, siehe [Seite einrichten](./7-1_seite_einrichten.md))
 -&gt; Stimmzettel-Kopf kompakt machen (Layout /Stimmzettel)
 -&gt; Erhöhen Sie die Anzahl der Spalten. Ist die „Anzahl Felder“ &gt; 1, sollten Sie „Kandidat:innen-Felder / als Tabelle“ deaktivieren, damit es kompakter wird.
 -&gt; Bei größeren Lücken: „Zeilen zusammen“ verkleinern.
@@ -162,9 +164,7 @@ Sollen Kandidierende in einem anderen Format auf dem Stimmzettel angezeigt werde
 
 :::
 
-:::warning
-
-## Wichtige Hinweise {#wichtige-hinweise}
+:::warning Wichtige Hinweise
 
 ***1. Zeilenhöhe***<br /><br />Um die Seitenaufteilung gefälliger zu machen, wird bei kleiner Anzahl von Kandidat:innen die Zeilenhöhe automatisch vergrößert.**<br /><br />**Bei weniger als 20 Kandidat:innen pro Spalte, wird die Mindesthöhe auf 16 pt (5,5 mm) gesetzt, bei &lt; 15 pro Spalte auf 24 pt (8,3 mm) und bei &lt; 10 pro Spalte auf 30 pt (10,8 mm). Die Höhe wird zusätzlich dynamisch an die Größe des Ankreuzfeldes angepasst, also ggf. vergrößert.
 
@@ -200,7 +200,7 @@ Ist die Option "**als Tabelle**" aktiviert, werden besondere Layout-Optionen bei
 
 Um ein gruppenspezifisches Layout (individuelles Layout für einzelne Stimmzettel) zu erzeugen, können Sie die Funktion "Layoutvorlagen" nutzen.
 
-Die Layoutvorlagen werden zentral unter ![](./img/20260521112155.png) verwaltet. Das Navigationsfeld **"Layoutvorlagen"** auf der linken Seite listet alle verfügbaren Vorlagen auf. Über **Hinzufügen**, **"Umbenennen"** und **"Löschen"** lassen sich Vorlagen anlegen und verwalten. Die Vorlage **"Standard"** kann nicht gelöscht werden.
+Die Layoutvorlagen werden zentral unter ![](./img/20260521112155.png) verwaltet. Das Navigationsfeld **"Layoutvorlagen"** auf der linken Seite listet alle verfügbaren Vorlagen auf. Über **Hinzufügen**, **"Umbenennen"** und **"Löschen"** lassen sich Vorlagen anlegen und verwalten. Die Vorlage **"Standard"** kann nicht gelöscht werden. Die Register „Wahlvorschläge“ und „Wahlergebnis“ sind nur beim Layout „Standard“ bearbeitbar; in den übrigen Layoutvorlagen sind sie gesperrt.
 
 ![Abb. : Gruppenspezifisches Layout der Stimmzettel](./img/20260521111440.png)
 
