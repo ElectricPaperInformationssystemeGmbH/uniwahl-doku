@@ -62,7 +62,7 @@ Bei Verhältniswahl (Listenwahl) kann die wählende Person
 
 Wurde ein Wahlvorschlag angekreuzt, erhalten die Bewerber:innen dieses Wahlvorschlags, die weniger als die erlaubte Stimmenanzahl haben, in der Reihenfolge der Benennung jeweils eine Zusatzstimme bis zur Erreichung der insgesamt zustehenden Stimmenzahl.
 
-// Der Zuteilung der Sitze auf die Wahlvorschläge liegt die Anzahl der auf die Wahlvorschläge entfallenen gültigen Stimmzettel (nicht: Stimmen) zu Grunde. Deshalb werden in diesem Fall die Stimmzettel pro Liste gezählt. Ein Stimmzettel entfällt auf einen Wahlvorschlag, wenn der gesamte Wahlvorschlag oder/und mindestens einer seiner Bewerber angekreuzt wurden.
+***Ohne Panaschieren:*** Der Zuteilung der Sitze auf die Wahlvorschläge liegt die Anzahl der auf die Wahlvorschläge entfallenen gültigen Stimmzettel (nicht: Stimmen) zu Grunde. Deshalb werden in diesem Fall die Stimmzettel pro Liste gezählt. Ein Stimmzettel entfällt auf einen Wahlvorschlag, wenn der gesamte Wahlvorschlag oder/und mindestens einer seiner Bewerber angekreuzt wurden.
 
 Über die Taste: „**Li.-Stimmzettel**“ bzw. das entsprechende Eingabefeld kann die Anzahl der Stimmzettel, die für diese Liste abgegeben wurden, eingegeben werden. Nach diesen Zahlen werden die Sitze auf die Listen verteilt.
 
@@ -72,7 +72,7 @@ Wurde ein Wahlvorschlag angekreuzt, erhalten die Bewerber:innen dieses Wahlvorsc
 
 Die Zuteilung der Sitze auf die Bewerber innerhalb der Liste erfolgt nach der Stimmenzahl der Personen.
 
-//: (Verteilen der Stimmen auf Personen mehrerer Wahlvorschläge): Wenn bei Listenwahl das Panaschieren erlaubt ist, erfolgt die Sitzzuteilung nach der Anzahl der auf die Listen entfallenen Stimmen (= „Zählstimmen”). Dabei erhalten die Wahlvorschläge zuerst so viele Stimmen, wie an Personen auf ihnen vergeben wurden.
+***Mit Panaschieren***: (Verteilen der Stimmen auf Personen mehrerer Wahlvorschläge): Wenn bei Listenwahl das Panaschieren erlaubt ist, erfolgt die Sitzzuteilung nach der Anzahl der auf die Listen entfallenen Stimmen (= „Zählstimmen”). Dabei erhalten die Wahlvorschläge zuerst so viele Stimmen, wie an Personen auf ihnen vergeben wurden.
 
 ![Abb. : Mit Panaschieren: Eingabe der Zählstimmen](./img/20260520140758.png)
 

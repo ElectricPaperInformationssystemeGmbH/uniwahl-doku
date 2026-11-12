@@ -12,7 +12,7 @@ Sie lernen auch, wie Sie direkt Web-Seiten erstellen können, um die Wahlbekannt
 
 Wie Sie die Texte der Ausgabe-Dokumente an die Bedürfnisse Ihrer Organisation anpassen können, finden Sie in den [Textbausteinen](./7-3_textbausteine.md).
 
-Die Ausgabe aller Wahldokumente erfolgt mit //:
+Die Ausgabe aller Wahldokumente erfolgt mit ***Microsoft Word** bzw. **Libre-/OpenOffice ***:
 
 1. **Vorschau / Preview**: Vor dem Ausdrucken kann das Dokument geprüft werden.
 1. **Korrektur**: Wenn nötig, können Formulierungen verändert, Texte hinzugefügt und das Layout verbessert werden.

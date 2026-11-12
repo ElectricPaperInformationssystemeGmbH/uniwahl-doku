@@ -76,7 +76,7 @@ Wählen Sie die Syntax aus zwei Möglichkeiten und tragen Sie den Provider-Namen
 
 *Abb. : Syntax für E-Mail-Adressen konfigurieren*
 
-//
+***Providernamen als Textbaustein eingeben***
 
 Alternativ kann der Providername auch als Textbaustein eingegeben werden:
 
@@ -86,7 +86,7 @@ Alternativ kann der Providername auch als Textbaustein eingegeben werden:
 
 *Abb. : Textbaustein „Mail-Provider: Steht hinter dem @“*
 
-//
+***Personendaten eingeben***
 
 Wenn Sie nun auf eine kandidierende Person klicken, sehen sie, dass die Personendaten jetzt ein Eingabefeld für die E-Mail-Adresse enthalten:
 

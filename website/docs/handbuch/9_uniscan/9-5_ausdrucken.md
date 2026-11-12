@@ -9,7 +9,7 @@ Sie können die Stimmzettel direkt ausgeben oder *als PDF* exportieren und der D
 - Sind *pdf*- und *odt*-Ausdrucke identisch? (Fensterscheibentest).
 - Geben Sie die *odt*-Ausdrucke als Muster mit zur Druckerei.
 
-Sie können die Texte bearbeiten und die Stimmzettel wieder speichern. //
+Sie können die Texte bearbeiten und die Stimmzettel wieder speichern. ***Sie dürfen aber auf keinen Fall die Justierecken, Kästchen und den Barcode verschieben.***
 
 **Texte bearbeiten:** Die Texte stehen in absolut positionierten Textboxen. Beim Klick auf den Text erscheint die Textbox. Mit Doppelklick erscheint der Textcursor.
 

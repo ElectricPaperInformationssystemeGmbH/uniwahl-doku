@@ -18,6 +18,6 @@ Tipp: Sie sollten vor Beginn des Wahlverfahrens vom Hauptwahlausschuss diese Art
 
 ## So erzeugen Sie HTML / PDF-Dokumente {#so-erzeugen-sie-html-pdf-dokumente}
 
-- Erstellen Sie das Dokument wie gewohnt mittels * bzw. * und geben Sie es in dem gewünschten Format aus:
+- Erstellen Sie das Dokument wie gewohnt mittels ***Open-/LibreOffice*** bzw. ***Microsoft Word*** und geben Sie es in dem gewünschten Format aus:
 - **PDF**: Menü: Datei / Exportieren als PDF...
 - **HTML**: Menü: Datei / Speichern unter... Wählen Sie als Dateityp: HTML-Dokument.
