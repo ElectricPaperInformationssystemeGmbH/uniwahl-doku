@@ -15,18 +15,25 @@ Im diesem Abschnitt wird die Vorbereitung und der Test einer Online-Wahl unter N
    1. [Texte](../handbuch/7_wahldokumente/7-3_textbausteine.md) der Stimmzettel und [Layout](../handbuch/7_wahldokumente/7-4_layout.md) des Online-Wahlsystems festlegen
    1. Eingabe der [Wahlvorschlagslisten und der Kandidierenden](./4_wahlvorschlaege.md)
    1. Übergabe der Daten per [Dateitransfer](https://dateitransfer.wahlen-organisieren.de/) an das Online-Wahlsystem<br />
-1. Zur Erzeugung einer echten Wahl im Online-Wahlsystem werden Dateien aus uniWAHL exportiert und im Online-Wahlsystem hochgeladen:
+1. Zur Erzeugung einer echten Wahl im Online-Wahlsystem werden Dateien aus uniWAHL exportiert und im Online-Wahlsystem hochgeladen (Online-Wahlsystem der ersten Generation; zur zweiten Generation siehe den Hinweis unten):
    1. Die **Wahlprojekt-Datei** aus der uniWAHL-Kernsoftware (im WHL- oder JSON-Format) mit allen Statusgruppen / Wahlbereichen im Status "Kandidateneingabe fertig" (dunkelblau), die gewählt werden sollen. (siehe auch [OWS Datenexport](../handbuch/10_ows/10-3_export.md))
    1. **Ein Wahlverzeichnis** (Testwähler:innen oder Live-Wähler:innen) mit 2 Spalten:
       1. **1. Spalte**: z.B. E-Mail, userID bzw. PseudoID: gibt die Identifikation des Wählenden aus dem Identity Management wieder.
       1. **2. Spalte**: Wählergruppe bzw. Wahlberechtigung: gibt die [Wählergruppencodes](../handbuch/10_ows/10-4_waehler_innengruppen.md) zur Zuordnung der Stimmzettel an.
    1. Das Logo, das in der Wahlkabine genutzt werden soll (URL zu einer Logo-Bilddatei (JPG,PNG,SVG) im Format 200x90 Pixel).<br />
 1. Die Rohdaten werden nach der Wahldurchführung aus dem Online-Wahlsystem exportiert und in uniWAHL importiert:
-   1. Mit dem Menübefehl `OWS / Importiere Rohdaten` werden die Stimmzettel-Rohdaten aus dem Online-Wahlsystem eingelesen.
+   1. Mit dem Menübefehl `OWS / Importiere Rohdaten` werden die Stimmzettel-Rohdaten aus dem Online-Wahlsystem eingelesen (erste Generation: `rohergebnisse.json`).
    1. Beim Import wird die [Wahlkennung](../handbuch/8_funktionen/8-3_wahlkennung.md) der Import-Datei geprüft, damit der Import dem korrekten Wahlprojekt zugeordnet wird.
    1. Anschließend wird automatisiert ein vollständiges [Auszählungsprotokoll](../handbuch/10_ows/10-5_import.md) erstellt, in dem alle Stimmzettel protokolliert sind und das Stimmverhalten der Wählenden sichtbar wird.
    1. Die Stimmen werden den Kandidierenden im Fenster: Zählen und Auswerten zugeordnet.<br />
 1. Es kann nun die [Auszählung](./8_auszaehlen.md) fertig gesetzt werden, die Sitzverteilung wird gestartet und das Wahlergebnis wird erstellt.
+
+:::note Online-Wahlsystem der zweiten Generation
+
+- Beim Export schreibt uniWAHL zusätzlich die Datei `<whl>_sg_out.zip` (`<whl>` = Name der Wahlprojekt-Datei). Sie enthält die Wahl als JSON-Datei, die Wählerdatei mit den Spalten `username`, `authorized-election-ids` und `area_name` sowie eine Berichtsdatei (siehe [Export der Daten aus uniWAHL](../handbuch/10_ows/10-3_export.md)).
+- Die Rohdaten kommen nicht als `rohergebnisse.json`, sondern als Ergebnis-Datenbank (`*.db` bzw. `*.sqlite`) aus dem Online-Wahlsystem und werden ebenfalls mit `OWS / Importiere Rohdaten` eingelesen.
+
+:::
 
 ![](./img/20240920143845.png)
 
@@ -36,16 +43,22 @@ Im diesem Abschnitt wird die Vorbereitung und der Test einer Online-Wahl unter N
 
 Zur Erzeugung einer Live-Vorschau am Preview-Server wird kein Dateitransfer benötigt, allerdings wird hier eine reine Vorschau der Wahlkabine ohne echte Wahl (keine Stimmabgabe - damit auch kein Wahlergebnis, keine Wählergruppen - alle Stimmzettel sind sichtbar) erzeugt. Die Preview öffnet sich direkt im Browser.
 
-- Starten Sie uniWAHL. Öffnen Sie die **DemoWahl.whl** (...\whl\beispiele).
+- Starten Sie uniWAHL. Öffnen Sie die **DemoWahl.whl** (`…\whl\DemoWahl.whl`).
 - Klicken Sie die Schaltfläche ![](./img/20260413095517.png) in der Symbolleiste oben rechts, um die Online-Vorschau zu öffnen.
 - Testen Sie zuerst, ob die Vorschau korrekt geöffnet wird (Zur Anzeige muss mindestens 1 Wahlbereich im Status ![](./img/20260413103006.png) (dunkelblau sein).
 - Die hier dargestellte Wahlkabine entspricht 1:1 der Wahlkonfiguration, die später im Online-Wahlsystem hochgeladen wird. Machen Sie sich mit dem Wahlablauf und den Elementen der Wahlkabine vertraut.
 
 Sie werden feststellen, dass keine Authentifizierung zur Live-Vorschau notwendig ist und immer alle Stimmzettel angezeigt werden (Sicht der Wahlorganisation). Die Sicht der Wahlberechtigten gehen wir mit Ihnen in den Testwahlen durch, so dass Sie das "echte" Wählen testen können.
 
+:::note Online-Wahlsystem der zweiten Generation
+
+Die Vorschau benötigt Zugangsdaten. Tragen Sie diese unter `OWS / Einstellungen` im Bereich „Zugangsdaten Vorschau“ ein, bevor Sie die Vorschau öffnen.
+
+:::
+
 :::warning
 
-**Hinweis:** Sollte keine Live-Preview angezeigt werden können, besteht in den meisten Fällen ein Netzwerkproblem bzw. eine Restriktion innerhalb der hauseigenen Firewall. Wir bitten Sie in diesem Fall, Ihre IT-Administration zu kontaktieren und eine explizite Freigabe für den Live-Preview-Server unter "preview.gremienwahlen.de" einzurichten.
+**Hinweis (Online-Wahlsystem der ersten Generation):** Sollte keine Live-Preview angezeigt werden können, besteht in den meisten Fällen ein Netzwerkproblem bzw. eine Restriktion innerhalb der hauseigenen Firewall. Wir bitten Sie in diesem Fall, Ihre IT-Administration zu kontaktieren und eine explizite Freigabe für den Live-Preview-Server unter "preview.gremienwahlen.de" einzurichten.
 
 :::
 
@@ -152,13 +165,13 @@ Die Texte der Online-Wahlkabine unterscheiden sich in [Bestimmungstexte der Stim
 
 - Markieren Sie einen Text in der Live-Vorschau der Kabine, z.B. den Text "Auswahlseite" und kopieren Sie diesen in die Zwischenablage (STRG+C).
 - Wechseln Sie zurück auf die Registerkarte `Online-Wahlsystem` in uniWAHL.
-- Fügen Sie den Text in das **Suchfeld** oberhalb der Texte ein (STRG+V) und führen Sie die Suche mit ENTER aus. Es werden Ihnen nun alle Texte angezeigt, die das Wort "Anleitung" enthalten.
-- Ändern Sie den Text nach Ihren Wünschen z.B. in "Gremienwahlen" oder "Inhaltverzeichnis" ab.
+- Fügen Sie den Text in das **Suchfeld** oberhalb der Texte ein (STRG+V) und führen Sie die Suche mit ENTER aus. Es werden Ihnen nun alle Texte angezeigt, die das Wort "Auswahlseite" enthalten.
+- Ändern Sie den Text nach Ihren Wünschen z.B. in "Gremienwahlen" oder "Inhaltsverzeichnis" ab.
 - Schauen Sie sich anschließend die Kabine in der Live-Vorschau an, um die Textänderung anzuzeigen.
 
 :::tip
 
-**Tipp:** Sie werden feststellen, dass bestimmte Begrifflichkeiten in mehreren Textbausteinen vorkommen. Es empfiehlt sich daher längere Textpassagen zu kopieren, um den richtigen Text schneller zu finden. Die Texte werden mit einer Highlight-Farbe hinterlegt, zudem sind die Bezeichner (im o.a. Beispiel "avbooth.electionChooserScreen.title") angegeben, um die Textstelle besser unterscheidbar zu machen.
+**Tipp:** Sie werden feststellen, dass bestimmte Begrifflichkeiten in mehreren Textbausteinen vorkommen. Es empfiehlt sich daher längere Textpassagen zu kopieren, um den richtigen Text schneller zu finden. Die Texte werden mit einer Highlight-Farbe hinterlegt, zudem sind die Bezeichner (im o.a. Beispiel `avBooth.electionChooserScreen.title` im Online-Wahlsystem der ersten Generation bzw. `electionSelectionScreen.title` in der zweiten Generation) angegeben, um die Textstelle besser unterscheidbar zu machen.
 
 :::
 
@@ -203,7 +216,7 @@ uniWAHL unterstützt die automatisierte Übertragung der Stimmzettel-Daten, Konf
 
 ### Zuordnung der Wählergruppen zu den Personen {#zuordnung-der-waehlergruppen-zu-den-personen}
 
-Es wird hierfür ein (pseudonymes) Wahlverzeichnis (XLSX) benötigt. Jede Person ist eine Zeile in diesem Verzeichnis und gehört mindestens zu einer Wählergruppe, z.B. Studierende in Fakultät 3. Durch den Menübefehl „Wählergruppen kodieren“ wird ein Assistent aufgerufen, der jeder Person im Wahlverzeichnis den Code ihrer Wählergruppe zuordnet (Eine neue Spalte mit kommaseparierten Werten zur Wahlberechtigung wird hinzugefügt).
+Es wird hierfür ein (pseudonymes) Wahlverzeichnis (XLSX) benötigt. Jede Person ist eine Zeile in diesem Verzeichnis und gehört mindestens zu einer Wählergruppe, z.B. Studierende in Fakultät 3. Durch den Menübefehl „Wahlverzeichnis kodieren“ wird ein Assistent aufgerufen, der jeder Person im Wahlverzeichnis den Code ihrer Wählergruppe zuordnet (Eine neue Spalte mit kommaseparierten Werten zur Wahlberechtigung wird hinzugefügt).
 
 - Öffnen Sie das Menü `OWS/Wahlverzeichnis kodieren`. Es wird ein Assistent aufgerufen, der jeder Person im Wählerverzeichnis den Code ihrer Wählergruppe zuordnet (Eine neue Spalte mit kommaseparierten Werten zur Wahlberechtigung wird in der XSLX hinzugefügt).
 - **1. Schritt:** Wählen Sie unter `Dateiname` das Wahlverzeichnis aus. Sie können die Beispiel-Datei (C:\Users\&lt;Nutzername&gt;\uniwahl\waehler\Wahlverzeichnis-Hochschule.xlsx) benutzen, um das Ganze auszuprobieren.
@@ -217,9 +230,9 @@ Es wird eine neue Excel-Tabelle erzeugt, in die die Wählergruppen-Codes als zus
 
 :::warning
 
-**Achtung:** **Personen ohne Eintrag in der Wählergruppe werden später ALLE Stimmzettel angezeigt.**
+**Achtung:** **Online-Wahlsystem der ersten Generation: Personen ohne Eintrag in der Wählergruppe werden später ALLE Stimmzettel angezeigt.** Im Online-Wahlsystem der zweiten Generation erhalten sie nur die Wahlen ohne Einschränkung (Stimmzettel ohne Wählergruppe).
 
-Zur Übergabe an das Online-Wahlsystem werden die Spalten „PseudoID“ und „Wählergruppe“ benötigt. Als PseudoID kann auch eine Wähler-ID oder Laufnummer bzw. (pseudonyme) E-Mail-Adresse genutzt werden, wenn zugleich ein Versand der Einladungen aus dem Online-Wahlsystem erfolgen soll.
+Zur Übergabe an das Online-Wahlsystem der ersten Generation werden die Spalten „PseudoID“ und „Wählergruppe“ benötigt. Als PseudoID kann auch eine Wähler-ID oder Laufnummer bzw. (pseudonyme) E-Mail-Adresse genutzt werden, wenn zugleich ein Versand der Einladungen aus dem Online-Wahlsystem erfolgen soll.
 
 :::
 
@@ -241,24 +254,24 @@ Mit Hilfe der Schaltfläche `Wählergruppe generieren` kann die Wähler:innengru
 
 ### Kontrolle und Korrektur der Zuordnungen {#kontrolle-und-korrektur-der-zuordnungen}
 
-Mit dem Menü-Befehl `Wählergruppen kontrollieren` *muss* die Zuordnung der Stimmzettel zu den Wählergruppen aus zwei verschiedenen Blickwinkeln überprüft werden, um sicherzustellen, dass alle Zuordnungen korrekt vorgenommen wurden.
+Mit dem Menü-Befehl `Wähler:innengruppe kontrollieren` *muss* die Zuordnung der Stimmzettel zu den Wählergruppen aus zwei verschiedenen Blickwinkeln überprüft werden, um sicherzustellen, dass alle Zuordnungen korrekt vorgenommen wurden.
 
-- Öffnen Sie den Dialog in `OWS / Wählergruppen kontrollieren` .
-- Überprüfen Sie alle **Merkmale der Wahlberechtigten**, mindestens die, die LEER, GELB oder ROT sind.
+- Öffnen Sie den Dialog in `OWS / Wähler:innengruppe kontrollieren` (die Schreibweise folgt dem eingestellten Gender-Trennzeichen).
+- Überprüfen Sie alle **Merkmale der Wahlberechtigten**, mindestens die gelb markierten: Gelb sind leere und doppelte Einträge. Rot (Wert kommt im Wählerverzeichnis nicht vor) wird nur im Kontrollschritt des Export-Assistenten markiert, wenn dort ein Wählerverzeichnis geladen ist (siehe [Export der Daten aus uniWAHL](../handbuch/10_ows/10-3_export.md)).
 - Überprüfen und korrigieren Sie die Einträge durch Klick in die Spalte und direkte Eingabe.
 - Bestätigen Sie Ihre Eingaben mit `OK` .
 
 :::warning
 
 **Hinweise:**
-- **Leere** Wählergruppen werden ***allen*** Wahlberechtigten angezeigt. Es kann Fälle geben (z.B. „Kleine Wahlen“), in denen allen Wähler:innen ein bestimmter Stimmzettel angezeigt werden soll. In den Fällen, in denen die Wählergruppe schlichtweg vergessen wurde, hilft die gelbe Markierung.
+- **Leere** Wählergruppen werden im Online-Wahlsystem der ersten Generation ***allen*** Wahlberechtigten angezeigt (zweite Generation: Wahl ohne Einschränkung, siehe oben). Es kann Fälle geben (z.B. „Kleine Wahlen“), in denen allen Wähler:innen ein bestimmter Stimmzettel angezeigt werden soll. In den Fällen, in denen die Wählergruppe schlichtweg vergessen wurde, hilft die gelbe Markierung.
 - **Doppelte** Wählergruppen besagen, dass einer bestimmten Wählergruppe mehrere Stimmzettel angezeigt werden. Es kann Fälle geben (z.B. parallele Wahl mehrerer Gremien), in denen diese Zuordnung sinnvoll ist. In den Fällen, in denen der Code versehentlich gedoppelt wurden, hilft die gelbe Markierung.
 - Um Stimmzettel mit **mehreren Merkmalen** (z.B. „Stud,7“) zu erhalten, muss die Person im Wahlverzeichnis mit **allen** Codes versehen werden.
 - Die Merkmale der Stimmzettel in uniWAHL sind also eine **Teilmenge aller Codes der Person im Wahlverzeichnis**. In oberen Beispiel würde eine Person, die im Wahlverzeichnis mit „Stud,7,weiblich“ kodiert ist, die Stimmzettel „Senat/Stud“, „StuPa“, „FakR IIV / Studierende“ und auch leere Stimmzettel („FakR IIV / WissMit“ und „FakR IlV / MTV“) angezeigt bekommen.
 
 :::
 
-Abschließend wird eine Excel-Tabelle ausgegeben, hiermit können Sie die Zuordnungen aus zwei verschiedenen Perspektiven mit dem Wahlverzeichnis abgleichen:
+Haben Sie im Dialog etwas geändert, wird abschließend eine Excel-Tabelle ausgegeben (`waehler\<whl>-Wählergruppen.xlsx` im Arbeitsverzeichnis). Hiermit können Sie die Zuordnungen aus zwei verschiedenen Perspektiven mit dem Wahlverzeichnis abgleichen:
 1. Welche Wählergruppen sind in den Stimmzetteln hinterlegt?
 1. Welche Personen bekommen welche Stimmzettel?
 
@@ -290,13 +303,19 @@ Diese Funktion übergibt die Stimmzettel an das Online-Wahlsystem (siehe [JSON-E
 
 Zur Übergabe an das Online-Wahlsystem werden die jedem Stimmzettel zugewiesenen Wählergruppen mit den Stimmzettel-Daten übergeben (siehe [Wähler:innengruppe](../handbuch/10_ows/10-4_waehler_innengruppen.md)).
 
+:::note Online-Wahlsystem der zweiten Generation
+
+Die zweite Generation wird unter `OWS / Einstellungen` mit „Nächste OWS-Generation verwenden“ eingeschaltet; dort werden auch die Zugangsdaten hinterlegt. Der Export-Assistent zeigt dann die passenden Felder (z. B. „Plattform-Version (OWS v2)“) und schreibt zusätzlich die Datei `<whl>_sg_out.zip`. Mit `OWS / SmartLink testen` können Sie einen SmartLink-Anmeldelink zum Ausprobieren erzeugen. Einzelheiten siehe [Export der Daten aus uniWAHL](../handbuch/10_ows/10-3_export.md).
+
+:::
+
 ## Import der Rohdaten {#import-der-rohdaten}
 
 ![](./img/20241011164617.png)
 Nachdem alle Daten im Online-Wahlsystem hochgeladen wurden, wird die Stimmabgabe mit Unterstützung unserer Online-Wahlmanager durchgeführt. Die Wahl wird im Backend des Online-Wahlsystems erzeugt, automatisiert gestartet und gestoppt. Nach der Beendigung des Wahlzeitraums kann nun die Auszählung erfolgen.
 
 - Öffnen Sie den Dialog `OWS / Importiere Rohdaten`.
-- Es wird automatisch das `Arbeitsverzeichnis` geöffnet. Im Ordner [**C:\Users\&lt;Nutzername&gt;\uniwahl\stimmen**] liegt eine *Beispieldatei* "rohergebnisse.json", die Sie zum Test mit der "Demo.whl" nutzen können. Wählen Sie die Datei aus `Öffnen` .
+- Es wird automatisch das `Arbeitsverzeichnis` geöffnet. Im Ordner [**C:\Users\&lt;Nutzername&gt;\uniwahl\stimmen**] liegt eine *Beispieldatei* "rohergebnisse.json" (Online-Wahlsystem der ersten Generation), die Sie zum Test mit der "DemoWahl.whl" nutzen können. Wählen Sie die Datei aus `Öffnen` . Bei der zweiten Generation wählen Sie stattdessen die Ergebnis-Datenbank (`*.db` bzw. `*.sqlite`) aus.
 - Die Rohdaten werden anschließend interpretiert. Es wird zuerst eine **Mitteilung** ausgegeben, die zur Prüfung der Plausibilität die Statistikgrößen anzeigt. Klicken Sie `OK` .
 - Nun werden die **Auszählungsergebnisse** in einem HTML-Protokoll ausgegeben. Diese Datei wird an der Stelle abgelegt, an der vorher die Rohdaten importiert wurden. Sie enthält:
 
