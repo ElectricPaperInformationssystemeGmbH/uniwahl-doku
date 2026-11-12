@@ -4,7 +4,7 @@ title: "Wahlverzeichnis importieren"
 
 ![](./img/20260311131940.png)
 
-Das interne Wahlverzeichnis (*.wvz) wird aus einer Excel- (xls, xlsx) oder Textdatei (*.txt) erstellt. Menübefehl: **Wahlverzeichnis / Importieren**. Es öffnet sich ein Dialogfenster zur Auswahl der Wahlverzeichnis-Datei, aus der die interne Datenbank erzeugt werden soll.
+Das interne Wahlverzeichnis (*.wvz) wird aus einer Excel-Datei (xls, xlsx) oder einer Textdatei (txt, csv) erstellt. Menübefehl: **Wahlverzeichnis / Importieren**. Es öffnet sich ein Dialogfenster zur Auswahl der Wahlverzeichnis-Datei, aus der die interne Datenbank erzeugt werden soll.
 
 ![](./img/20260311103341.png)
 
@@ -16,7 +16,7 @@ Alternativ kann man durch Betätigung dieser Taste ![](./img/20260311132307.png)
 **Wahlverzeichnisname:**
 Geben Sie hier den Namen ein, unter dem das Wahlverzeichnis intern geführt werden soll. Den Namen können Sie frei wählen, z.B. „Studierende“ oder „Personal“; als Vorgabe wird der Dateiname vorgeschlagen.
 
-Klicken Sie auf ** &lt; Weiter &gt; **
+Klicken Sie auf **Weiter &gt;**.
 
 ![](./img/20260311103733.png)
 
@@ -31,18 +31,24 @@ Nur die mit Schlüsselnamen bezeichneten Felder werden importiert.
 
 Am besten konfigurieren Sie *alle* benötigten Personendaten *vorher*, dann erübrigt sich dieser Schritt.
 
-Klicken Sie auf **&lt;Weiter&gt;**, wenn alle benötigten Felder ausgewählt wurden, um den Vorgang fortzusetzen.
+:::warning
+
+Die Zuordnung „PersonenNr“ ist Pflicht. Fehlt sie, bricht der Assistent beim Klick auf „Weiter >“ mit einer Fehlermeldung ab. Ordnen Sie dann mit „&lt; Zurück“ einem Bezeichner aus der Datei die „PersonenNr“ zu oder passen Sie den Bezeichner in der Importdatei an.
+
+:::
+
+Klicken Sie auf **Weiter &gt;**, wenn alle benötigten Felder ausgewählt wurden, um den Vorgang fortzusetzen.
 
 ![](./img/20260311103850.png)
 
-**3. Schritt:** Die Anzahl der eingelesenen Personen wird angezeigt.<br />
+**3. Schritt:** Die Daten werden eingelesen und die Anzahl der eingelesenen Personen wird angezeigt („Drücken Sie "Weiter" um die Daten zu transformieren“).
 
-Klicken Sie auf **&lt;Weiter&gt;**
+Klicken Sie auf **Weiter &gt;**.
+
+**4. Schritt:** Die Daten werden in das interne Format umgewandelt und als `waehler\<Name>.wvz` im Arbeitsverzeichnis gespeichert (`<Name>` ist der im 1. Schritt eingegebene Wahlverzeichnisname). Eine Rückfrage erscheint nur, wenn diese Datei bereits existiert: Sie werden dann gefragt, ob sie überschrieben werden soll.
 
 ![](./img/20260311103914.png)
 
-**4. Schritt:** Sie werden gefragt, ob sie die Daten in eine .wvz-Datei umwandeln wollen. Bestätigen Sie diese Anfrage.
+Wenn „Der Vorgang ist abgeschlossen“ angezeigt wird, klicken Sie auf **Fertig**. Das Wahlverzeichnis steht danach im Programm zur Verfügung.
 
 ![](./img/20260311103933.png)
-
-**5. Schritt:** Klicken Sie auf **Fertig"**, zum Fertigstellen des Imports. Danach werden die Daten in die .wvz-Datei geschrieben und das Wahlverzeichnis wird geöffnet.

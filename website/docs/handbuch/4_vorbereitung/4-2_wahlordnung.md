@@ -6,7 +6,7 @@ Mit dieser Schaltfläche ![](./img/20260304105045.png) oder durch den Menübefeh
 
 - Allgemein
 - Mehrheitswahl
-- Listenwahl (Verhältniswahl)
+- Listenwahl
 - Terminplan
 
 ## Allgemeine Bestimmungen {#allgemeine-bestimmungen}
@@ -36,27 +36,9 @@ Bei Aktivierung entscheidet die Wahlleitung per Los.
 
 **Prinzip der Erststimme - Zweitstimme anwenden:** Ist diese Option aktiviert, können Wahlbereiche durch Erst- und Zweitstimme miteinander verbunden werden (z.B. Wahlkreis und Gesamtliste oder akademischer Senat und erweiterter akademischer Senat, → [Zweistimmenwahlrecht](../12_wahlordnung/12-4_erststimme.md)). Die Wahlbereiche erhalten dadurch ein Dropdown-Feld "Zweitstimme Wahlbereich" zur Auswahl des Wahlbereichs, an den die bereits gewählten Personen übergeben werden sollen. Die direkt gewählten Personen werden anschließend in diesem Berech (z.B. der Gesamtliste) als "bereits gewählt" ausgewiesen und von der Sitzverteilung ausgeschlossen.
 
-**Wahlbereiche verbinden (nur online):** Ermöglicht die Verknüpfung mehrerer Wahlbereiche bei Online-Wahlen. Stimmen oder Ergebnisse können dadurch zwischen Wahlbereichen übertragen werden.
+**Wahlbereiche verbinden (nur online):** Ermöglicht es, mehrere Wahlbereiche eines Gremiums miteinander zu verbinden. Verbundene Wahlbereiche erscheinen in der Online-Wahl (erste Generation) auf einem gemeinsamen Stimmzettel. Stimmen werden dabei nicht zwischen den Wahlbereichen übertragen.
 
-Im Dialog **Gremium** öffnet die Schaltfläche **Wahlbereichsverbindungen** ein Fenster, in dem die zu verbindenden Wahlbereiche ausgewählt und zu Verbindungen zusammengefasst werden. Bestehende Verbindungen werden auf der Schaltfläche angezeigt.
-
-![Abb.: Gremium-Dialog](./img/20260518135942.png)
-
-*Abb.: Gremium-Dialog*
-
-![Abb.: Dialog Verbindungen bearbeiten](./img/20260518135954.png)
-
-*Abb.: Dialog Verbindungen bearbeiten*
-
-Im Dialog **Verbindungen bearbeiten** werden Wahlbereiche per Strg-Klick ausgewählt und über **Verbinden** zu einer Verbindung zusammengefasst. Bestehende Verbindungen können über **Verbindung löschen** und das Anklicken wieder aufgehoben werden.
-
-:::warning
-
-**Achtung:** Wahlbereiche mit unterschiedlichen Wählergruppenkodierungen können nicht miteinander verbunden werden. UniWAHL gibt in diesem Fall eine Fehlermeldung aus.
-
-![](./img/20260518135821.png)
-
-:::
+Ist die Option aktiv, erscheint im Gremium-Fenster die Schaltfläche „Wahlbereichsverbindungen“. Dort werden die Verbindungen festgelegt (→ [Gremium bearbeiten](./4-4_gremien.md#wahlbereichsverbindungen)).
 
 **Betriebsratswahl:** Wenn diese Option aktiviert wird, werden alle Parameter der Wahlordnung auf die durch das BetrVG vorgeschriebenen Werte gesetzt. (z.B. d'Hondt, gebundene Listen).
 
@@ -74,7 +56,10 @@ Im Dialog **Verbindungen bearbeiten** werden Wahlbereiche per Strg-Klick ausgew�
 
 :::warning
 
-**Hinweis:** Die Option **"Feste Anzahl Ersatzvertreter"** ist nicht kombinierbar mit der Option **"Einzelkandidaten möglich"** bei Listenwahl. Wird **"Einzelkandidaten möglich"** aktiviert, deaktiviert uniWAHL die feste Anzahl automatisch und gibt einen entsprechenden Hinweis aus.
+**Hinweis:** Die Option „Feste Anzahl Ersatzvertreter“ ist nicht mit der Option „Einzelkandidat:innen möglich“ (Registerkarte „Listenwahl“) kombinierbar:
+
+- Ist „Feste Anzahl Ersatzvertreter“ aktiv, lässt sich „Einzelkandidat:innen möglich“ nicht setzen. uniWAHL meldet: „Wenn die Option „Feste Anzahl Ersatzvertreter” aktiviert ist, sind Einzelkandidaten nicht möglich.“
+- Ist „Einzelkandidat:innen möglich“ gesetzt und Sie aktivieren „Feste Anzahl Ersatzvertreter“, nimmt uniWAHL das Häkchen bei „Feste Anzahl Ersatzvertreter“ mit einem Hinweis wieder zurück. Entfernen Sie in diesem Fall zuerst „Einzelkandidat:innen möglich“.
 
 ![](./img/20260521105749.png)
 
@@ -115,7 +100,7 @@ Ist eine Sprache aktiviert und die Konfiguration wird gespeichert, werden versch
 
 |  |  |
 |---|---|
-| ![](./img/20260304112314.png) | Die Standardwerte werden wieder eingesetzt. |
+| ![](./img/20260304112314.png) | „Standard“: Nach einer Rückfrage werden die Standardwerte wieder eingesetzt – nur für die gerade geöffnete Registerkarte. |
 | ![](../3_erste_einblicke/img/20260303131656.png) | Die Parameter einer vorher gespeicherten Wahlordnung werden eingesetzt. |
 | ![](./img/20260304112405.png) | Die Spezifikationen der Wahlordnung werden in Datei gespeichert |
 
@@ -178,8 +163,8 @@ Nominierung oder Wahl ohne Bindung an Wahlvorschläge
 **Wie Listen mit Kennwort**: Auch bei Mehrheitswahl können die Bewerbenden wie Listen mit Kennwort aufgeführt werden:
 
 &gt; Die Kandidat:innen erhalten ein Feld mit der Bezeichnung: „Kennwort“.
-&gt; Im Register „Listenwahl“: „Spez. Bezeichner für Einzelwahlvorschlag“.
-&gt; Im Dialog „Textbausteine“ / Register „Allgemein“ definiert man den „Bezeichner f. Liste mit Einzelbewerber“.
+&gt; Im Register „Listenwahl“: „Spez. Bezeichner für Einzelwahlvorschlag: (s. Texte)“.
+&gt; Im Dialog „Textbausteine“ / Register „Stimmzettel“ definiert man den „Bezeichner f. Liste mit Einzelbewerber“.
 
 **Kandidaten mit Überschrift:** Ist der Haken gesetzt, wird im Dialog zur Einrichtung der Wahlbereiche / Statusgruppen eine individuelle Überschrift angeboten, die in den Stimmzetteln ausgegeben werden kann.
 
@@ -218,7 +203,7 @@ Wählen Sie, wie Stimmgleichheiten (personalisierte Verhältniswahl) entschieden
 
 Die Zuordnung der erworbenen Sitze nach der Stimmenzahl der Liste kann nach dem **d‘Hondtschen** Höchstzahlverfahren (Standard), nach **Hare-Niemeyer** oder nach **Sainte-Laguë** erfolgen. Wenn für Gremien unterschiedliche Sitzzuteilungsverfahren vorgeschrieben sind, wählt man die Option „Variabel“. In diesem Fall muss in jedem Gremium das Verfahren bestimmt werden.
 
-**Einzelkandidaten möglich:** Einzelkandidat:innen sind möglich und werden in einem Block dargestellt. Sie werden aber wie einzelne Listen behandelt. (Nur bei personalisierten Listen vorgesehen.)
+**Einzelkandidat:innen möglich:** Einzelkandidat:innen sind möglich und werden in einem Block dargestellt. Sie werden aber wie einzelne Listen behandelt. (Nur bei personalisierten Listen vorgesehen.)
 
 **Kandidat mit 0 Stimmen berücksichtigen:** Kandidat:innen, auf die keine Stimmen entfallen sind, werden bei der Vergabe der Sitze trotzdem berücksichtigt (Standard) – oder nicht.
 
@@ -227,6 +212,8 @@ Die Zuordnung der erworbenen Sitze nach der Stimmenzahl der Liste kann nach dem 
 **Kumulieren (Stimmenhäufung)**: Kann ein Kandidat mehrere Stimmen bekommen? (Nur aktiv, wenn bei Listenwahl mehrere Stimmen zu vergeben sind.)
 
 **Panaschieren (Stimmen an mehrere Listen)**: Dürfen die Stimmen auf mehrere Listen verteilt werden? (Nur aktiv, wenn mehrere Stimmen zu vergeben sind.)
+
+**BayWO-Panaschieren: Listenstimmen gleicher Wert**: Nur sichtbar bei Listenart „Person oder Liste (kombiniert, verteilend)“ oder „Variabel“ und erlaubtem Panaschieren. Aktiviert: Listenstimmen zählen unabhängig von der Größe der Liste gleich viel – die angekreuzte Liste erhält alle nicht an Personen vergebenen Stimmen. Deaktiviert: Es zählen nur die auf die Personen übertragenen Listenstimmen.
 
 **Listenverbindungen**: Verbindungen zwischen Listen zu einem Wahlvorschlag können zugelassen werden.
 
@@ -238,9 +225,9 @@ Die Zuordnung der erworbenen Sitze nach der Stimmenzahl der Liste kann nach dem 
 
 **Reihenfolge der Listen losen**: Die Reihenfolge der Listen auf den Stimmzetteln und den Bekanntmachungen kann durch Los ermittelt werden.
 
-**Mehrheitsbedingungen erzwingen (Hare-Niemeyer)**: Eine Liste mit der Mehrheit der Stimmen muss auch die Mehrheit der Sitze bekommen.
+**Mehrheitsbedingung erzwingen (Hare-Niem.)**: Eine Liste mit der Mehrheit der Stimmen muss auch die Mehrheit der Sitze bekommen.
 
-**Spezieller Bezeichner für Einzelwahlvorschlag:** Wenn eine Liste nur einen Bewerber enthält, kann ein spezieller Bezeichner („Einzelwahlvorschlag“) aufgeführt werden. Dieser wird im Menü: *Konfiguration/Textbausteine* definiert.
+**Spez. Bezeichner für Einzelwahlvorschlag: (s. Texte)**: Wenn eine Liste nur einen Bewerber enthält, kann ein spezieller Bezeichner („Einzelwahlvorschlag“) aufgeführt werden. Dieser wird im Menü `Konfiguration / Textbausteine`, Register „Stimmzettel“, als „Bezeichner f. Liste mit Einzelbewerber“ definiert.
 
 **Mehrheitswahl, wenn 1 Liste:** Wenn nur eine Liste eingereicht wurde, findet Mehrheitswahl statt (Standard).
 

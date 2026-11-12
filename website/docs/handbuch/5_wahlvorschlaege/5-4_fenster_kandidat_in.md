@@ -8,11 +8,11 @@ Ein neuer Kandidat wird hinzugefügt durch Betätigen der Taste:
 
 Die Kandidat:innen-Daten können (auch später) bearbeitet werden durch:
 
-![](./img/20260312124627.png) Zum Bearbeiten aus der Gruppe oder aus der Liste, zu der er gehört.
+![](./img/20260312124627.png) „Bearbeiten F3“ im Fenster des Wahlbereichs bzw. der Liste, zu der er gehört.
 
 **oder**
 
-im Fenster: Gruppe / Kandidat:innen-Übersicht
+durch Doppelklick auf den Namen in der Kandidat:innenliste des Wahlbereich- bzw. Liste-Fensters
 
 **oder**
 
@@ -36,12 +36,21 @@ durch Doppelklick im Navigationsfenster
 
 Im Feld links unten werden Informationen über das auf den Kandidat:innen bezogene Wahlergebnis gezeigt, wie viele Stimmen er bekam, ob er gewählt wurde, welchen Rang er in der Liste bekam und ob zur Bestimmung der Reihenfolge gelost wurde.
 
-## Rechte Seite: {#rechte-seite}
+## Schaltfläche Vertretung {#schaltflaeche-vertretung}
 
-## Feld Wahlverzeichnis durchsuchen {#feld-wahlverzeichnis-durchsuchen}
+Sieht die Wahlordnung eine persönliche Vertretung vor, gibt es zusätzlich die Schaltfläche „Vertretung“. Ist bereits eine Vertretung eingetragen, steht deren Name auf der Schaltfläche; sonst werden Sie gefragt, ob eine Vertretung angelegt werden soll. Näheres unter [Persönliche Vertretung](./5-13_persoenliche_vertretung.md).
 
-Zur Übernahme von Kandidat:innen kann das Wahlverzeichnis durchsucht werden.
+## Rechte Seite: Feld Wahlverzeichnis durchsuchen {#feld-wahlverzeichnis-durchsuchen}
 
-In diesem Dialog wählen Sie zunächst das gewünschte Wahlverzeichnis aus und öffnen es mit der Schaltfläche ![](./img/20260318123356.png). Anschließend können Sie im Feld „Name / Nummer“ nach einer Person unter ![](./img/20260318123447.png) suchen. Die gefundenen Einträge werden in der Ergebnisliste angezeigt.
+<a id="rechte-seite"></a>
 
-Markieren Sie die gewünschte Person und übernehmen Sie die Auswahl mit ![](./img/20260318123827.png) . Mit ![](./img/20260318123934.png) schließen Sie den Dialog ohne Übernahme.
+Zur Übernahme von Kandidat:innen kann das Wahlverzeichnis direkt im Kandidat:innen-Fenster durchsucht werden (kein eigener Dialog).
+
+Wählen Sie im Bereich „Wahlverzeichnis durchsuchen“ unter „Wahlverzeichnis“ das gewünschte Wahlverzeichnis aus; ist es noch nicht geöffnet, öffnen Sie es mit der Schaltfläche ![](./img/20260318123356.png) („Öffnen“). Anschließend können Sie im Feld „Name / Nummer“ nach einer Person mit ![](./img/20260318123447.png) („Suche“) suchen. Die gefundenen Einträge werden in der Trefferliste angezeigt.
+
+Ein Klick auf eine Person in der Trefferliste (oder Enter bzw. Leertaste) überträgt deren Daten in die Personendaten. Sichern Sie mit „OK“ bzw. ![](./img/20260318123827.png) („Speichern“); mit ![](./img/20260318123934.png) („Abbrechen“) verwerfen Sie die Änderungen.
+
+## Rückfragen beim Speichern {#rueckfragen-beim-speichern}
+
+- Wurden die Personendaten einer Person aus dem Wahlverzeichnis geändert, fragt das Programm: „Sollen die Änderungen in das Wahlverzeichnis übernommen werden?“
+- Kandidiert im selben Gremium bereits eine Person mit gleichem Namen, erscheint eine Warnung. Mit „Ja“ übernehmen Sie die Person trotzdem (z. B. wenn dieselbe Person mehrfach kandidieren darf). Handelt es sich um zwei verschiedene Personen gleichen Namens, wählen Sie „Nein“ und ergänzen den Namen durch einen Zusatz.

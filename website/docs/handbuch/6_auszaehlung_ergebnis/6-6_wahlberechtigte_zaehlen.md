@@ -7,7 +7,7 @@ Für die Feststellung des Wahlergebnisses muss die genaue Zahl der Wahlberechtig
 Der Assistent zum Zählen der Wahlberechtigten lässt sich auf zwei Wegen starten:
 
 - Im Dialogfenster des Wahlbereichs über die Schaltfläche **…zählen** neben dem Eingabefeld für die Anzahl der Wahlberechtigten. Dieser Weg zählt die Wahlberechtigten für den jeweiligen Wahlbereich.
-- Über den Menübefehl `Funktionen > Wahlberechtigte zählen` beziehungsweise `Funktionen > Wahlberechtigte zählen (Alle Bereiche)`. Zweiteres durchläuft alle Wahlbereiche in einem Schritt und trägt die ermittelten Zahlen automatisch ein, sodass eine manuelle Eingabe in jedem einzelnen Wahlbereich entfällt.
+- Über den Menübefehl `Funktionen > Wahlberechtigte zählen` beziehungsweise `Funktionen > Wahlberechtigte zählen (alle Bereiche)`. Zweiteres durchläuft alle Wahlbereiche in einem Schritt und trägt die ermittelten Zahlen automatisch ein, sodass eine manuelle Eingabe in jedem einzelnen Wahlbereich entfällt.
 
 :::tip
 
@@ -23,7 +23,7 @@ Bei Betriebsratswahlen u.a. werden wahlberechtigte Männer und Frauen in getrenn
 
 Im Dialogfenster des Wahlbereichs befindet sich neben dem Eingabefeld für die Anzahl der Wahlberechtigten ein Tastenfeld **„...zählen“**. Damit wird ein Assistent gestartet.
 
-**Vorbereitung**: Zuerst wird nach dem Wahlverzeichnis gefragt, das durchgezählt werden soll (Excel-Datei „.xls“ oder „.xlsx“). Dieses wird im Ordner „waehler“ im Arbeitsverzeichnis gesucht.
+**Vorbereitung**: Zuerst erscheint eine Bestätigungsfrage, die die Funktion kurz erklärt; bestätigen Sie mit `OK`. Danach wird nach dem Wahlverzeichnis gefragt, das durchgezählt werden soll (Excel-Datei „.xls“ oder „.xlsx“). Dieses wird im Ordner „waehler“ im Arbeitsverzeichnis gesucht. Enthält die Excel-Datei mehrere Tabellen, wählen Sie im Dialog „Tabelle auswählen“ die gewünschte Tabelle aus.
 
 ![Abb. : Auswahl der Felder](./img/20260324142704.png)
 
@@ -65,24 +65,24 @@ Danach sollten Sie mit `OK` die Daten des Wahlbereichs sichern.
 
 Dieser Eintrag ruft den oben beschriebenen Assistenten auf (gilt pro Wahlbereich) ohne Wählergruppen-Codes.
 
-**2. Wahlberechtigte zählen (Alle Bereiche)**
+**2. Wahlberechtigte zählen (alle Bereiche)**
 
-Diese Eintrag ruft einen Assistenten für alle Wahlbereiche auf.
+Dieser Eintrag ruft einen Assistenten für alle Wahlbereiche auf. Der erste Schritt beschreibt den Ablauf.
 
 ![Abb.: Beschreibung des Assistent](./img/20260706164545.png)
 
 *Abb.: Beschreibung des Assistent*
 
-Es wird ein **Wahlverzeichnis mit Wählergruppen** benötigt. Sie können dafür die Funktion [Wählergruppen kodieren](../10_ows/10-4_waehler_innengruppen.md) nutzen, wenn Ihr Wahlverzeichnis nicht bereits über eine solche Spalte verfügt.
+Es wird ein **Wahlverzeichnis mit Wählergruppen** als Excel-Datei (XLSX) benötigt. Sie können dafür die Funktion `OWS / Wahlverzeichnis kodieren` nutzen (siehe [Wähler:innengruppen](../10_ows/10-4_waehler_innengruppen.md)), wenn Ihr Wahlverzeichnis nicht bereits über eine solche Spalte verfügt.
 
-- Wählen Sie das Wahlverzeichnis aus.
+- Wählen Sie das Wahlverzeichnis (XLSX) aus.
 
 ![](./img/20260706165248.png)
 
-- Wählen Sie die Spalte, die die Wählergruppenzuordnung enthält.
+- Ordnen Sie der Spalte, die die Wählergruppenzuordnung enthält, in der rechten Spalte den Schlüsselnamen „Wählergruppe“ zu.
 
 ![](./img/20260706165743.png)
 
-- Kontrollieren Sie die Zahlen und schließen den Dialog ab.
+- Kontrollieren Sie die Zahlen pro Wahlbereich. Gelb markiert sind doppelte und leere Werte, rot markiert Wählergruppen, die im Wahlverzeichnis nicht vorkommen; beides sind Warnungen. Die Zahlen der Wahlberechtigten können Sie direkt in der Tabelle ändern. Mit `Fertig` werden die Werte in alle Wahlbereiche übernommen.
 
 ![](./img/20260706165902.png)

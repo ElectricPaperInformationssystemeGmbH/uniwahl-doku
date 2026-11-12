@@ -4,7 +4,7 @@ title: "Scannergestütztes Auszählen (Add-on uniSCAN)"
 
 import DocCardList from '@theme/DocCardList';
 
-Mit uniWAHL und dem Modul // ist es möglich, eingescannte Stimmzettel automatisch auswerten zu lassen.
+Mit uniWAHL und dem Modul ***uniSCAN*** ist es möglich, eingescannte Stimmzettel automatisch auswerten zu lassen.
 
 |  |  |
 |---|---|

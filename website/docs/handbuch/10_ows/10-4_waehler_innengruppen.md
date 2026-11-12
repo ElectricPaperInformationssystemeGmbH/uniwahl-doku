@@ -14,7 +14,7 @@ Wähler:innengruppen fassen die Wähler:innen zusammen, die dieselben Merkmale b
 
 ## Zuordnung der Wähler:innengruppen-Merkmale zu den Personen {#zuordnung-der-waehler-innengruppen-merkmale-zu-den-personen}
 
-Durch den Menübefehl unter `OWS / Wahlverzeichnis kodieren` wird ein Assistent gestartet, der jeder Person im Wahlverzeichnis die Wähler:innen-Merkmale zuordnet. Vor dem Start wird gefragt, ob ein vorher erstellter Code-Satz bearbeitet oder ein neuer erzeugt werden soll.
+Durch den Menübefehl unter `OWS / Wahlverzeichnis kodieren` wird ein Assistent gestartet, der jeder Person im Wahlverzeichnis die Wähler:innen-Merkmale zuordnet.
 
 ![Abb. : Wahlverzeichnis kodieren](./img/20260401141034.png)
 
@@ -24,7 +24,7 @@ Im folgenden Beispiel sind die Zugehörigkeit zur Fakultät und die Statusgruppe
 
 **1. Schritt:** Wählen Sie das Wahlverzeichnis (Excel .xls oder .xlsx; erste Zeile: Bezeichner) aus, dem die Merkmale hinzugefügt werden sollen, und die Datei, in die das bearbeitete Wahlverzeichnis geschrieben werden soll (Vorschlag: *Dateiname + „-OUT“*).
 
-Klicken Sie `Weiter`.
+Klicken Sie `Weiter`. Enthält die Excel-Datei mehrere Tabellenblätter, fragt uniWAHL, welches verwendet werden soll.
 
 ![Abb. : Für die Kodierung benötigte Felder](./img/20260401141128.png)
 
@@ -38,9 +38,9 @@ Klicken Sie `Weiter`.
 
 ![Abb. : Benötigte Felder und Trennzeichen](./img/20260401141349.png)
 
-*Abb. : Benötigte Felder und Trennzeichen*
+*Abb. : Benötigte Felder und Trennzeichen (das Trennzeichen ist fest ein Komma)*
 
-**3. Schritt:** In der Liste (Abb.) erscheinen die ausgewählten Feldbezeichner. Durch Doppelklick auf den jeweiligen Bezeichner öffnet sich ein Dialog, in dem man den in der Datei in dieser Spalte gefundenen Einträgen beliebige Codes (z.B. Abkürzungen) zuweist. Diese können aus Buchstaben oder Ziffern bestehen. Wiederholen Sie den Vorgang für alle ausgewählten Bezeichner. Die noch nicht kodierten Bezeichner werden durch * markiert.
+**3. Schritt:** In der Liste (Abb.) erscheinen die ausgewählten Feldbezeichner. Durch Doppelklick auf den jeweiligen Bezeichner öffnet sich ein Dialog, in dem man den in der Datei in dieser Spalte gefundenen Einträgen beliebige Codes (z.B. Abkürzungen) zuweist. Diese können aus Buchstaben oder Ziffern bestehen. Wiederholen Sie den Vorgang für alle ausgewählten Bezeichner. Die noch nicht kodierten Bezeichner werden durch * markiert. Ist ein Feld bereits kodiert, fragt uniWAHL beim Doppelklick nach: „Datei durchsuchen“ (Inhalte neu ermitteln), „Vorherige benutzen“ (bisherige Kodierung weiter bearbeiten) oder „Abbrechen“.
 
 Kodieren Sie alle Attribute, die mit * markiert sind.
 
@@ -77,18 +77,26 @@ Beispiel zur Bedeutung der Wähler:innengruppen-Parameter:
 | „hl,fb1“ | Professor:innen der Fakultät-1; bei der Person muss „hl“ *und* „fb1“ vorhanden sein. |
 | „w“ | Alle weiblichen Personen unabhängig von Status, Fakultät usw. |
 
-| **Einer Person aus dem Wählerverzeichnis, die keiner Wähler:innengruppe angehört, werden alle Stimmzettel angezeigt werden.** |
+| **Online-Wahlsystem der ersten Generation: Einer Person aus dem Wählerverzeichnis, die keiner Wähler:innengruppe angehört, werden alle Stimmzettel angezeigt.** |
 |---|
+
+:::note Online-Wahlsystem der zweiten Generation
+
+Eine Person ohne Wähler:innengruppe erhält nur die Wahlen ohne Einschränkung, also Stimmzettel, bei denen keine Wähler:innengruppe eingetragen ist.
+
+:::
+
+<a id="kontrolle_der_zuordnungen"></a>
 
 ## Kontrolle der Zuordnungen {#kontrolle-der-zuordnungen}
 
-Nach der Eingabe der Zuordnungen der Stimmzettel zu Wähler:innengruppen, sollte man die Richtigkeit kontrollieren und protokollieren. Mit dem Menübefehl: `OWS / Wähler:innengruppen kontrollieren` wird ein Dialog geöffnet, der die Kontrolle und Nachbearbeitung der Wählergruppen ermöglicht.
+Nach der Eingabe der Zuordnungen der Stimmzettel zu Wähler:innengruppen, sollte man die Richtigkeit kontrollieren und protokollieren. Mit dem Menübefehl: `OWS / Wähler:innengruppe kontrollieren` (Schreibweise je nach eingestelltem Gender-Trennzeichen) wird ein Dialog geöffnet, der die Kontrolle und Nachbearbeitung der Wählergruppen ermöglicht. Er zeigt in der Spalte „Stimmzettel des Wahlbereichs“ jeden Stimmzettel und in der Spalte „Merkmale der Wahlberechtigten“ die eingetragene Wähler:innengruppe, die direkt geändert werden kann. Leere und doppelte Einträge sind gelb markiert. Mit „OK“ werden die Änderungen übernommen; bei „Abbrechen“ fragt uniWAHL nach, ob vorgenommene Änderungen beibehalten werden sollen; „Hilfe“ öffnet die Online-Hilfe.
 
 ![Abb. : Kontrolle der Zurordnung (Warnungen werden gelb angezeigt)](./img/20260401142405.png)
 
 *Abb. : Kontrolle der Zurordnung (Warnungen werden gelb angezeigt)*
 
-Anschließend wird eine Tabelle erzeugt, die in Excel (siehe Abb.) geöffnet wird. Diese protokolliert die Zuordnung und kann an die interne IT zur Erzeugung der Merkmale übergeben werden.
+Wurde im Dialog etwas geändert, wird anschließend eine Tabelle erzeugt (`waehler\<whl>-Wählergruppen.xlsx` im Arbeitsverzeichnis), die in Excel (siehe Abb.) geöffnet wird. Diese protokolliert die Zuordnung und kann an die interne IT zur Erzeugung der Merkmale übergeben werden.
 
 ![Abb. : Zuordnung der Stimmzettel zu den Merkmalen der Personen](./img/20260416111202.png)
 
@@ -96,7 +104,7 @@ Anschließend wird eine Tabelle erzeugt, die in Excel (siehe Abb.) geöffnet wir
 
 ## Übergabe der Wähler:innenmerkmale {#uebergabe-der-waehler-innenmerkmale}
 
-Zur Übergabe an das Onlinewahlsystem (siehe S. 115) werden die jedem Stimmzettel zugewiesenen Wähler:innengruppen-Merkmale mit den Stimmzettel-Daten übergeben.
+Zur Übergabe an das Onlinewahlsystem (siehe [Export der Daten aus uniWAHL](./10-3_export.md)) werden die jedem Stimmzettel zugewiesenen Wähler:innengruppen-Merkmale mit den Stimmzettel-Daten übergeben. Die folgende Beschreibung gilt für das Online-Wahlsystem der ersten Generation.
 
 - A. In den *Excel-Tabellen* der Gremienübersicht [**Ausgabe/Tabelle**] erscheint die Zuordnung jeweils in der Spalte „*Wählergruppe*“:
 ![Abb. : Gremienübersicht mit Angabe der Wähler:innengruppen](./img/20260409095855.png)
@@ -113,3 +121,9 @@ Zur Übergabe an das Onlinewahlsystem (siehe S. 115) werden die jedem Stimmzette
 ![Abb. : Wählerdaten in JSON](./img/20241011145227.png)
 
 *Abb. : Wählerdaten in JSON*
+
+:::note Online-Wahlsystem der zweiten Generation
+
+uniWAHL wertet die Wähler:innengruppen-Codes beim Export aus und trägt je Person in die Spalte `authorized-election-ids` der Wählerdatei (in `<whl>_sg_out.zip`) die Wahlen ein, an denen sie teilnehmen darf. Als Kennung dient dort die `external_id` der Wahl des jeweiligen Gremiums (siehe [Export der Daten aus uniWAHL](./10-3_export.md)).
+
+:::
