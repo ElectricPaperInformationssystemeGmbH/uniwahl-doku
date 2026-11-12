@@ -8,4 +8,4 @@ uniWAHL gibt zahlreiche Wahldokumente direkt in Microsoft Office, OpenOffice ode
 
 *Abb.: Wahl des Office-Systems*
 
-Vor der ersten Ausgabe wird nach dem Office-System gefragt, wenn es noch nicht bekannt ist. Sie können dies auch später über den Menübefehl `Konfiguration / Office-System` einstellen.
+Voreingestellt ist „Microsoft Office (docx)“. Umstellen können Sie dies über den Menübefehl `Konfiguration / Office-System`: Im Dialog „Office-System wählen“ wählen Sie „OpenOffice / LibreOffice (odt)“ oder „Microsoft Office (docx)“.
