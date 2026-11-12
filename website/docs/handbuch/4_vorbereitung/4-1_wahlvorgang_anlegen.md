@@ -66,7 +66,7 @@ Im nächsten Schritt müssen Sie den Spalten der Importdatei die Schlüsselfelde
 |  |  |
 |---|---|
 | Strukturdaten XLSX-Dateipfad | Wählen Sie hier eine Datei aus, die alle Kandidierenden enthält, z.B. den Export einer Nominierung oder selbst erstellte Kandidierendenliste. |
-| WHL-Datei (optional) | Wählen Sie hier eine bestehende Wahlvorgangsdatei, wenn Sie aus dieser Wahlordnung, Texte, Layouts etc. in das neue Projekt übernehmen wollen. |
+| WHL-Datei | Optional: Wählen Sie hier eine bestehende Wahlvorgangsdatei, wenn Sie aus dieser Wahlordnung, Texte, Layouts etc. in das neue Projekt übernehmen wollen. |
 |  |  |
 
 Klicken Sie auf `Weiter` .
@@ -75,13 +75,16 @@ Klicken Sie auf `Weiter` .
 
 *Abb. : Spaltenzuordnung*
 
-Die Spalten Gremium und Gruppe sind Pflichtfelder und müssen zugeordnet werden.
+Pflichtfelder sind:
+
+- ohne WHL-Datei: „Gremium“ und „Gruppe“,
+- mit WHL-Datei: „Gremium“ und eine der Spalten „Gruppe“ oder „Wahlbereichkürzel“.
 
 ![Abb. : Erforderliche Felder für den Wahlimport](./img/20260304114641.png)
 
 *Abb. : Erforderliche Felder für den Wahlimport*
 
-Anschließend werden die in der Datei erkannten Wahlbereiche angezeigt. In der Tabelle lassen sich nun die Sitze eingeben und der Import durch das Klicken auf `Weiter` abschließen. Es wird ein neues Wahlprojekt geöffnet.
+Anschließend werden die in der Datei erkannten Wahlbereiche angezeigt. In der Tabelle lassen sich nun die Sitze eingeben; klicken Sie dann auf `Weiter`. Im vierten Schritt meldet uniWAHL, dass die neue Wahl erzeugt wurde: „Bestätigen Sie 'FERTIG', um die Wahl jetzt zu öffnen.“ Mit `Fertig` wird das neue Wahlprojekt geöffnet.
 
 ![Abb. : Importierte Wahlbereiche / Gruppen inklusive weiterer Daten zur Nachkontrolle](./img/20260304114702.png)
 
