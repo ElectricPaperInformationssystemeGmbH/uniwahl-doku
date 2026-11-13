@@ -10,28 +10,26 @@ Das Hauptfenster ist die Schaltzentrale des Programms. Von hier aus werden alle 
 
 Im oberen Bereich befinden sich
 
-- die **Kopfleiste** (1),
-- die **Menüleiste** (2) und
-- die **Werkzeugleiste** (3).
+- die **Kopfleiste** mit den Menüs (1) und
+- die **Werkzeugleiste** (2).
 
 Der linke Bereich ist das **Navigationsbereich**, in dem das zu bearbeitende Objekt ausgewählt wird.
 
 Der rechte Bereich ist das **Arbeitsfeld**, in dem die Fenster zum Bearbeiten der verschiedenen Objekte geöffnet werden.
 
-Die **Statusleiste** (4) unten enthält den Dateinamen des aktiven Objektes, einige Hilfsinformationen sowie die Versionsnummer des Programms.
+Die **Statusleiste** (3) unten enthält den Dateinamen des aktiven Objektes, einige Hilfsinformationen sowie die Versionsnummer des Programms.
 
 ## Kopfleiste {#kopfleiste}
 
-Die Kopfleiste enthält die gewohnten Windows-Funktionen:
+Die Kopfleiste enthält die gewohnten Windows-Funktionen und die Menüs:
 
 - Links: ![](./img/image11.png)uniWAHL-Icon doppelklicken schließt die Anwendung.
-- Mitte: Titelfeld zeigt den Namen des aktuellen Wahlvorgangs.
-
+- Daneben: die Menüs.
 - Rechts: ![](./img/20260324104955.png) *minimieren* - *Vollbild/angepasst* - *Fenster schließen*.
 
 ## Menüleiste {#menueleiste}
 
-Die Menüleiste erschließt alle Funktionen des Systems. Eine Übersicht über das Menüsystem finden Sie im Kapitel 13 „Menü-Befehle“ .
+Die Menüs stehen in der Kopfleiste und erschließen alle Funktionen des Systems. Eine Übersicht über das Menüsystem finden Sie im Kapitel 13 „Menü-Befehle“ .
 
 ## Werkzeugleiste {#werkzeugleiste}
 
